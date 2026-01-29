@@ -1,0 +1,33 @@
+{
+  "name": "deepfashion2-training",
+  "version": "1.0.0",
+  "description": "DeepFashion2 clothing classification training pipeline",
+  "author": "PrismStyle AI Team",
+  "license": "MIT",
+  "python": {
+    "requires": ">=3.8"
+  },
+  "scripts": {
+    "setup": "pip install -r requirements.txt",
+    "download-data": "python download_dataset.py",
+    "train": "python train_model.py",
+    "convert": "python convert_model.py",
+    "tensorboard": "tensorboard --logdir logs/"
+  },
+  "directories": {
+    "data": "data",
+    "models": "models",
+    "logs": "logs"
+  },
+  "gpu": {
+    "cuda_version": "11.8",
+    "min_memory_gb": 8,
+    "recommended_memory_gb": 16
+  },
+  "dataset": {
+    "name": "DeepFashion2",
+    "classes": 13,
+    "images": 491000,
+    "password": "2019Deepfashion2"
+  }
+}

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  deepfashion2-training:
+    build: .
+    container_name: deepfashion2-training
+    runtime: nvidia  # For GPU support
+    ports:
+      - "8888:8888"   # Jupyter Notebook
+      - "6006:6006"   # TensorBoard
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+      - ./converted_models:/app/converted_models
+      - ./notebooks:/app/notebooks
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

@@ -1,0 +1,16 @@
+torch
+torchvision
+torchaudio
+transformers
+onnx
+onnxruntime
+opencv-python
+pillow
+numpy
+scipy
+tqdm
+albumentations
+matplotlib
+timm
+coremltools
+onnxsim
