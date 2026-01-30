@@ -19,6 +19,7 @@ class _WardrobeManagementState extends State<WardrobeManagement> {
   String _selectedCategory = 'All';
   final Set<String> _selectedItems = {};
   bool _isSelectionMode = false;
+  // ignore: unused_field - Reserved for pull-to-refresh feature
   bool _isRefreshing = false;
 
   final List<String> _categories = [

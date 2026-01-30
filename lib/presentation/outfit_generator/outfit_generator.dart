@@ -225,8 +225,11 @@ class _OutfitGeneratorState extends State<OutfitGenerator>
 
   late OpenAIClient _aiClient;
   late WeatherService _weatherService;
+  // ignore: unused_field - Used by _generateAIRecommendations
   bool _isGenerating = false;
+  // ignore: unused_field - Used by _generateAIRecommendations
   String _aiRecommendations = '';
+  // ignore: unused_field - Reserved for weather loading indicator
   bool _isLoadingWeather = true;
 
   final List<String> _selectedCategories = [
@@ -551,6 +554,7 @@ class _OutfitGeneratorState extends State<OutfitGenerator>
     );
   }
 
+  // ignore: unused_element - Reserved for AI-powered recommendations feature
   Future<void> _generateAIRecommendations() async {
     if (_selectedCategories.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -574,8 +578,8 @@ class _OutfitGeneratorState extends State<OutfitGenerator>
 
       await for (final chunk in _aiClient.generateOutfitSuggestions(
         wardrobeItems: wardrobeItems,
-        occasion: _selectedOccasion ?? 'casual',
-        timeOfDay: _selectedTimeOfDay ?? 'all_day',
+        occasion: _selectedOccasion,
+        timeOfDay: _selectedTimeOfDay,
         weather: _weatherData['condition'] as String? ?? 'moderate',
         location: _selectedLocation,
       )) {

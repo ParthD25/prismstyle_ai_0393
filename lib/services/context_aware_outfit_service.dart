@@ -363,6 +363,7 @@ class ContextAwareOutfitService {
   /// Generate styling tips based on context
   List<String> _generateStylingTips(OutfitContext context) {
     final tips = <String>[];
+    // ignore: unused_local_variable - Reserved for temperature-based tips
     final temp = context.weather?.temperature ?? 20.0;
     final season = context.temporal.season;
 

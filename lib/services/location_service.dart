@@ -23,6 +23,7 @@ class LocationService {
   // Cache duration: 30 minutes
   static const Duration _cacheDuration = Duration(minutes: 30);
   
+  // ignore: unused_field - Reserved for position caching
   Position? _cachedPosition;
   LocationData? _cachedLocationData;
   bool _isInitialized = false;

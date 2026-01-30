@@ -79,9 +79,10 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Padding(
-                padding: EdgeInsets.all(4.w),
+                padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -89,14 +90,14 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
                         Expanded(
                           child: Text(
                             outfit["title"] as String,
-                            style: theme.textTheme.titleLarge,
+                            style: theme.textTheme.titleMedium,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
                         Container(
                           padding: EdgeInsets.symmetric(
                             horizontal: 2.w,
-                            vertical: 0.5.h,
+                            vertical: 0.3.h,
                           ),
                           decoration: BoxDecoration(
                             color: theme.colorScheme.tertiary.withValues(
@@ -110,7 +111,7 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
                               CustomIconWidget(
                                 iconName: 'star',
                                 color: theme.colorScheme.tertiary,
-                                size: 14,
+                                size: 12,
                               ),
                               SizedBox(width: 1.w),
                               Text(
@@ -125,7 +126,7 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 1.h),
+                    SizedBox(height: 0.5.h),
                     Flexible(
                       child: Text(
                         outfit["description"] as String,
@@ -136,13 +137,13 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    SizedBox(height: 1.h),
+                    const Spacer(),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: onTap,
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.symmetric(vertical: 1.5.h),
+                          padding: EdgeInsets.symmetric(vertical: 1.h),
                         ),
                         child: Text('Try This Look'),
                       ),

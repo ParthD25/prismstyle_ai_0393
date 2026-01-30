@@ -28,6 +28,7 @@ class HomeDashboardState extends State<HomeDashboard> {
     '/user-profile', // index 4 - Profile
   ];
 
+  // ignore: unused_field - Available for tab-based navigation
   final List<Widget> _screens = [
     const HomeDashboardInitialPage(),
     const WardrobeManagement(),

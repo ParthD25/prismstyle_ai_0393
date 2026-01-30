@@ -20,6 +20,7 @@ class SocialValidation extends StatefulWidget {
 class _SocialValidationState extends State<SocialValidation>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  // ignore: unused_field - Reserved for pull-to-refresh feature
   bool _isRefreshing = false;
 
   final List<Map<String, dynamic>> _myPosts = [

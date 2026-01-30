@@ -42,13 +42,16 @@ class _CameraCaptureState extends State<CameraCapture>
   final ClothingClassifierService _classifierService =
       ClothingClassifierService.instance;
   final ColorDetectionService _colorService = ColorDetectionService.instance;
+  // ignore: unused_field - Reserved for future wardrobe integration
   final WardrobeService _wardrobeService = WardrobeService.instance;
 
   // Detected attributes for captured image
   Map<String, dynamic> _detectedAttributes = {};
 
-  // Real-time classification state
+  // Real-time classification state - reserved for future feature
+  // ignore: unused_field
   final bool _isRealTimeEnabled = false;
+  // ignore: unused_field
   DateTime? _lastClassificationTime;
 
   @override

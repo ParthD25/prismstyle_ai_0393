@@ -1,4 +1,6 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:sizer/sizer.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -84,7 +86,13 @@ class _GenerateOutfitState extends State<GenerateOutfit> {
   @override
   void initState() {
     super.initState();
-    _aiClient = OpenAIClient(OpenAIService().dio);
+    try {
+      _aiClient = OpenAIClient(OpenAIService().dio);
+    } catch (e) {
+      debugPrint('Failed to initialize OpenAI client: $e');
+      // Create a fallback Dio instance
+      _aiClient = OpenAIClient(Dio());
+    }
     _weatherService = WeatherService.instance;
   }
 

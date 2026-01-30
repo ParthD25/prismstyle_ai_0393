@@ -134,6 +134,7 @@ class OutfitGenerationService {
     final dresses = grouped['Dresses'] ?? [];
     final shoes = grouped['Shoes'] ?? [];
     final outerwear = grouped['Outerwear'] ?? [];
+    // ignore: unused_local_variable - Reserved for accessory combinations
     final accessories = grouped['Accessories'] ?? [];
 
     // Combination 1: Top + Bottom + Shoes (+ optional Outerwear/Accessories)

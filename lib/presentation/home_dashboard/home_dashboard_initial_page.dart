@@ -21,6 +21,7 @@ class HomeDashboardInitialPage extends StatefulWidget {
 
 class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
   bool _isLoading = false;
+  // ignore: unused_field - Reserved for weather loading indicator
   bool _isLoadingWeather = true;
 
   // Services

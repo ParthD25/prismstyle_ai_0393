@@ -20,6 +20,7 @@ class LocalPythonAIService {
   String _serverUrl = 'http://localhost:5000';
 
   // Path to the Python backend
+  // ignore: unused_field - Reserved for custom backend path configuration
   String? _pythonBackendPath;
 
   /// Initialize the service and check if Python backend is running

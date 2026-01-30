@@ -19,6 +19,7 @@ class _SplashScreenState extends State<SplashScreen>
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
 
+  // ignore: unused_field - Reserved for initialization state tracking
   bool _isInitializing = true;
   String _loadingMessage = 'Preparing your style assistant';
 
