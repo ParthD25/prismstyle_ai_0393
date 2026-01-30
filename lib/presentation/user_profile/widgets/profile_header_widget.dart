@@ -47,17 +47,6 @@ class ProfileHeaderWidget extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
 
-          SizedBox(height: 0.5.h),
-
-          // Email
-          Text(
-            userData['email'] as String,
-            style: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.colorScheme.onSurfaceVariant,
-            ),
-            textAlign: TextAlign.center,
-          ),
-
           SizedBox(height: 2.h),
 
           // Edit Profile Button

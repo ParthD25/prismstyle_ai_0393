@@ -56,7 +56,7 @@ class WeatherCardWidget extends StatelessWidget {
               ),
             ),
           ),
-          
+
           // Main content
           Padding(
             padding: EdgeInsets.all(5.w),
@@ -84,9 +84,9 @@ class WeatherCardWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                
+
                 SizedBox(height: 2.h),
-                
+
                 // Temperature and icon row
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -117,7 +117,7 @@ class WeatherCardWidget extends StatelessWidget {
                         ],
                       ),
                     ),
-                    
+
                     // Weather icon (large and beautiful)
                     Container(
                       width: 22.w,
@@ -126,18 +126,19 @@ class WeatherCardWidget extends StatelessWidget {
                         color: Colors.white.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(16),
                       ),
-                      child: Center(
-                        child: _buildWeatherAnimation(condition),
-                      ),
+                      child: Center(child: _buildWeatherAnimation(condition)),
                     ),
                   ],
                 ),
-                
+
                 SizedBox(height: 2.h),
-                
+
                 // Outfit recommendation
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.2.h),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 3.w,
+                    vertical: 1.2.h,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(12),
@@ -175,20 +176,25 @@ class WeatherCardWidget extends StatelessWidget {
   Widget _buildWeatherAnimation(String condition) {
     final lowerCondition = condition.toLowerCase();
     IconData icon;
-    
+
     if (lowerCondition.contains('sun') || lowerCondition.contains('clear')) {
       icon = Icons.wb_sunny_rounded;
     } else if (lowerCondition.contains('partly')) {
       icon = Icons.cloud_queue_rounded;
-    } else if (lowerCondition.contains('cloud') || lowerCondition.contains('overcast')) {
+    } else if (lowerCondition.contains('cloud') ||
+        lowerCondition.contains('overcast')) {
       icon = Icons.cloud_rounded;
-    } else if (lowerCondition.contains('rain') || lowerCondition.contains('drizzle')) {
+    } else if (lowerCondition.contains('rain') ||
+        lowerCondition.contains('drizzle')) {
       icon = Icons.water_drop_rounded;
-    } else if (lowerCondition.contains('snow') || lowerCondition.contains('sleet')) {
+    } else if (lowerCondition.contains('snow') ||
+        lowerCondition.contains('sleet')) {
       icon = Icons.ac_unit_rounded;
-    } else if (lowerCondition.contains('thunder') || lowerCondition.contains('storm')) {
+    } else if (lowerCondition.contains('thunder') ||
+        lowerCondition.contains('storm')) {
       icon = Icons.thunderstorm_rounded;
-    } else if (lowerCondition.contains('fog') || lowerCondition.contains('mist')) {
+    } else if (lowerCondition.contains('fog') ||
+        lowerCondition.contains('mist')) {
       icon = Icons.foggy;
     } else if (lowerCondition.contains('wind')) {
       icon = Icons.air_rounded;
@@ -196,11 +202,7 @@ class WeatherCardWidget extends StatelessWidget {
       icon = Icons.cloud_rounded;
     }
 
-    return Icon(
-      icon,
-      size: 48,
-      color: Colors.white,
-    );
+    return Icon(icon, size: 48, color: Colors.white);
   }
 
   List<Color> _getWeatherGradient(String condition) {
@@ -210,15 +212,20 @@ class WeatherCardWidget extends StatelessWidget {
       return [const Color(0xFFFF9500), const Color(0xFFFF5E3A)];
     } else if (lowerCondition.contains('partly')) {
       return [const Color(0xFF5AC8FA), const Color(0xFF007AFF)];
-    } else if (lowerCondition.contains('cloud') || lowerCondition.contains('overcast')) {
+    } else if (lowerCondition.contains('cloud') ||
+        lowerCondition.contains('overcast')) {
       return [const Color(0xFF8E8E93), const Color(0xFF636366)];
-    } else if (lowerCondition.contains('rain') || lowerCondition.contains('drizzle')) {
+    } else if (lowerCondition.contains('rain') ||
+        lowerCondition.contains('drizzle')) {
       return [const Color(0xFF5856D6), const Color(0xFF007AFF)];
-    } else if (lowerCondition.contains('snow') || lowerCondition.contains('sleet')) {
+    } else if (lowerCondition.contains('snow') ||
+        lowerCondition.contains('sleet')) {
       return [const Color(0xFFAFD8F8), const Color(0xFF5AC8FA)];
-    } else if (lowerCondition.contains('thunder') || lowerCondition.contains('storm')) {
+    } else if (lowerCondition.contains('thunder') ||
+        lowerCondition.contains('storm')) {
       return [const Color(0xFF5856D6), const Color(0xFF30276B)];
-    } else if (lowerCondition.contains('fog') || lowerCondition.contains('mist')) {
+    } else if (lowerCondition.contains('fog') ||
+        lowerCondition.contains('mist')) {
       return [const Color(0xFFAEAEB2), const Color(0xFF8E8E93)];
     } else if (lowerCondition.contains('wind')) {
       return [const Color(0xFF64D2FF), const Color(0xFF5AC8FA)];

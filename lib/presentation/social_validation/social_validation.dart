@@ -250,10 +250,7 @@ class _SocialValidationState extends State<SocialValidation>
         SafeArea(
           bottom: false,
           child: Container(
-            padding: EdgeInsets.symmetric(
-              horizontal: 5.w,
-              vertical: 1.5.h,
-            ),
+            padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.5.h),
             decoration: BoxDecoration(
               color: theme.colorScheme.surface,
               border: Border(
@@ -270,51 +267,53 @@ class _SocialValidationState extends State<SocialValidation>
                   children: [
                     Padding(
                       padding: EdgeInsets.only(left: 1.w),
-                      child: Text('Social', style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
-                    ),
-                  IconButton(
-                    icon: CustomIconWidget(
-                      iconName: 'notifications_outlined',
-                      color: theme.colorScheme.onSurface,
-                      size: 24,
-                    ),
-                    onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('No new notifications'),
-                          duration: Duration(seconds: 2),
+                      child: Text(
+                        'Social',
+                        style: theme.textTheme.headlineSmall?.copyWith(
+                          fontWeight: FontWeight.w600,
                         ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-              SizedBox(height: 1.h),
-              Container(
-                decoration: BoxDecoration(
-                  color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(8.0),
-                  border: Border.all(
-                    color: theme.colorScheme.outline.withValues(alpha: 0.3),
-                  ),
-                ),
-                child: TabBar(
-                  controller: _tabController,
-                  indicator: BoxDecoration(
-                    color: theme.colorScheme.primary,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  labelColor: theme.colorScheme.onPrimary,
-                  unselectedLabelColor: theme.colorScheme.onSurface,
-                  dividerColor: Colors.transparent,
-                  tabs: const [
-                    Tab(text: 'My Posts'),
-                    Tab(text: 'Friends\' Feed'),
+                      ),
+                    ),
+                    IconButton(
+                      icon: CustomIconWidget(
+                        iconName: 'notifications_outlined',
+                        color: theme.colorScheme.onSurface,
+                        size: 24,
+                      ),
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('No new notifications'),
+                            duration: Duration(seconds: 2),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
-              ),
-            ],
-          ),
+                SizedBox(height: 1.h),
+                Container(
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.surfaceContainerHighest,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: TabBar(
+                    controller: _tabController,
+                    indicator: BoxDecoration(
+                      color: theme.colorScheme.primary,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    labelColor: theme.colorScheme.onPrimary,
+                    unselectedLabelColor: theme.colorScheme.onSurface,
+                    dividerColor: Colors.transparent,
+                    tabs: const [
+                      Tab(text: 'My Posts'),
+                      Tab(text: 'Friends\' Feed'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
 

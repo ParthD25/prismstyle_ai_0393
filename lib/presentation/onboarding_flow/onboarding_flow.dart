@@ -88,7 +88,7 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
     // Save that onboarding has been completed
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('hasCompletedOnboarding', true);
-    
+
     if (mounted) {
       Navigator.of(
         context,

@@ -73,9 +73,7 @@ class _UserProfileState extends State<UserProfile> {
                     color: theme.colorScheme.onSurface,
                     size: 24,
                   ),
-                  onPressed: () {
-                    // Settings action
-                  },
+                  onPressed: () => _showSettingsSheet(context),
                 ),
               ],
             ),
@@ -100,33 +98,6 @@ class _UserProfileState extends State<UserProfile> {
 
                 // Style Preferences Section
                 StylePreferencesWidget(userData: userData),
-
-                SizedBox(height: 2.h),
-
-                // Account Settings Section
-                SettingsSectionWidget(
-                  title: 'Account Settings',
-                  items: [
-                    {
-                      'icon': 'email',
-                      'title': 'Email',
-                      'subtitle': userData['email'] as String,
-                      'onTap': () => _navigateToEmailSettings(),
-                    },
-                    {
-                      'icon': 'lock',
-                      'title': 'Password',
-                      'subtitle': 'Change your password',
-                      'onTap': () => _navigateToPasswordSettings(),
-                    },
-                    {
-                      'icon': 'notifications',
-                      'title': 'Notifications',
-                      'subtitle': 'Manage notification preferences',
-                      'onTap': () => _navigateToNotificationSettings(),
-                    },
-                  ],
-                ),
 
                 SizedBox(height: 2.h),
 
@@ -264,6 +235,101 @@ class _UserProfileState extends State<UserProfile> {
 
   void _navigateToLocationSettings() {
     // Navigate to weather location settings
+  }
+
+  void _showSettingsSheet(BuildContext context) {
+    final theme = Theme.of(context);
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: theme.colorScheme.surface,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) => Container(
+        padding: EdgeInsets.all(4.w),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Handle bar
+            Center(
+              child: Container(
+                width: 12.w,
+                height: 4,
+                margin: EdgeInsets.only(bottom: 2.h),
+                decoration: BoxDecoration(
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+            ),
+            Text(
+              'Account Settings',
+              style: theme.textTheme.headlineSmall?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(height: 2.h),
+            // Settings items
+            _buildSettingsTile(
+              context,
+              Icons.email_outlined,
+              'Email',
+              userData['email'] as String,
+              _navigateToEmailSettings,
+            ),
+            _buildSettingsTile(
+              context,
+              Icons.lock_outline,
+              'Password',
+              'Change your password',
+              _navigateToPasswordSettings,
+            ),
+            _buildSettingsTile(
+              context,
+              Icons.notifications_outlined,
+              'Notifications',
+              'Manage notification preferences',
+              _navigateToNotificationSettings,
+            ),
+            SizedBox(height: 2.h),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSettingsTile(
+    BuildContext context,
+    IconData icon,
+    String title,
+    String subtitle,
+    VoidCallback onTap,
+  ) {
+    final theme = Theme.of(context);
+    return ListTile(
+      contentPadding: EdgeInsets.symmetric(horizontal: 2.w),
+      leading: Icon(icon, color: theme.colorScheme.onSurface, size: 24),
+      title: Text(title, style: theme.textTheme.bodyLarge),
+      subtitle: Text(
+        subtitle,
+        style: theme.textTheme.bodySmall?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
+        ),
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+      ),
+      trailing: Icon(
+        Icons.chevron_right,
+        color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
+        size: 24,
+      ),
+      onTap: () {
+        Navigator.pop(context);
+        onTap();
+      },
+    );
   }
 
   void _showSignOutDialog() {

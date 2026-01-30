@@ -113,7 +113,10 @@ class _SplashScreenState extends State<SplashScreen>
     }
 
     if (mounted) {
-      Navigator.of(context, rootNavigator: true).pushReplacementNamed(nextRoute);
+      Navigator.of(
+        context,
+        rootNavigator: true,
+      ).pushReplacementNamed(nextRoute);
     }
   }
 

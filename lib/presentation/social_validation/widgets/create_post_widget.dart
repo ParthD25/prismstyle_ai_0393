@@ -143,7 +143,8 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final hasSelectedImage = _selectedOutfitImage != null || _selectedPhotoFromGallery != null;
+    final hasSelectedImage =
+        _selectedOutfitImage != null || _selectedPhotoFromGallery != null;
 
     return Container(
       height: 90.h,
@@ -174,9 +175,16 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                   onPressed: () => Navigator.pop(context),
                   child: Text('Cancel', style: theme.textTheme.labelLarge),
                 ),
-                Text('New Post', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600)),
+                Text(
+                  'New Post',
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 TextButton(
-                  onPressed: _isLoading || !hasSelectedImage ? null : _handlePostCreate,
+                  onPressed: _isLoading || !hasSelectedImage
+                      ? null
+                      : _handlePostCreate,
                   child: _isLoading
                       ? SizedBox(
                           width: 20,
@@ -189,7 +197,11 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                       : Text(
                           'Share',
                           style: theme.textTheme.labelLarge?.copyWith(
-                            color: hasSelectedImage ? theme.colorScheme.primary : theme.colorScheme.onSurface.withValues(alpha: 0.4),
+                            color: hasSelectedImage
+                                ? theme.colorScheme.primary
+                                : theme.colorScheme.onSurface.withValues(
+                                    alpha: 0.4,
+                                  ),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -212,7 +224,9 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                   Container(
                     width: double.infinity,
                     height: 45.h,
-                    color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
+                    color: theme.colorScheme.surfaceContainerHighest.withValues(
+                      alpha: 0.5,
+                    ),
                     child: _buildPhotoPreview(theme),
                   ),
 
@@ -225,7 +239,9 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                         // User avatar
                         CircleAvatar(
                           radius: 5.w,
-                          backgroundColor: theme.colorScheme.primary.withValues(alpha: 0.2),
+                          backgroundColor: theme.colorScheme.primary.withValues(
+                            alpha: 0.2,
+                          ),
                           child: CustomIconWidget(
                             iconName: 'person',
                             color: theme.colorScheme.primary,
@@ -240,7 +256,9 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                               hintText: 'Write a caption...',
                               border: InputBorder.none,
                               hintStyle: theme.textTheme.bodyLarge?.copyWith(
-                                color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
+                                color: theme.colorScheme.onSurface.withValues(
+                                  alpha: 0.5,
+                                ),
                               ),
                             ),
                             style: theme.textTheme.bodyLarge,
@@ -252,32 +270,52 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                     ),
                   ),
 
-                  Divider(color: theme.colorScheme.outline.withValues(alpha: 0.2)),
+                  Divider(
+                    color: theme.colorScheme.outline.withValues(alpha: 0.2),
+                  ),
 
                   // Source selection tabs
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 4.w,
+                      vertical: 2.h,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Choose Photo', style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600)),
+                        Text(
+                          'Choose Photo',
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                         SizedBox(height: 1.5.h),
-                        
+
                         // Tab selection
                         Row(
                           children: [
                             Expanded(
-                              child: _buildSourceTab(0, 'Gallery', Icons.photo_library_rounded, theme),
+                              child: _buildSourceTab(
+                                0,
+                                'Gallery',
+                                Icons.photo_library_rounded,
+                                theme,
+                              ),
                             ),
                             SizedBox(width: 2.w),
                             Expanded(
-                              child: _buildSourceTab(1, 'Wardrobe', Icons.checkroom_rounded, theme),
+                              child: _buildSourceTab(
+                                1,
+                                'Wardrobe',
+                                Icons.checkroom_rounded,
+                                theme,
+                              ),
                             ),
                           ],
                         ),
-                        
+
                         SizedBox(height: 2.h),
-                        
+
                         // Content based on selected tab
                         _selectedTab == 0
                             ? _buildGalleryOptions(theme)
@@ -292,14 +330,29 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Visibility', style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600)),
+                        Text(
+                          'Visibility',
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                         SizedBox(height: 1.h),
-                        _buildVisibilityOption('friends', 'Friends Only', Icons.group_rounded, theme),
-                        _buildVisibilityOption('public', 'Public', Icons.public_rounded, theme),
+                        _buildVisibilityOption(
+                          'friends',
+                          'Friends Only',
+                          Icons.group_rounded,
+                          theme,
+                        ),
+                        _buildVisibilityOption(
+                          'public',
+                          'Public',
+                          Icons.public_rounded,
+                          theme,
+                        ),
                       ],
                     ),
                   ),
-                  
+
                   SizedBox(height: 4.h),
                 ],
               ),
@@ -315,10 +368,7 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
       return Stack(
         fit: StackFit.expand,
         children: [
-          Image.file(
-            _selectedPhotoFromGallery!,
-            fit: BoxFit.cover,
-          ),
+          Image.file(_selectedPhotoFromGallery!, fit: BoxFit.cover),
           Positioned(
             top: 8,
             right: 8,
@@ -365,7 +415,7 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
         ],
       );
     }
-    
+
     // Empty state
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -386,14 +436,21 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
     );
   }
 
-  Widget _buildSourceTab(int index, String label, IconData icon, ThemeData theme) {
+  Widget _buildSourceTab(
+    int index,
+    String label,
+    IconData icon,
+    ThemeData theme,
+  ) {
     final isSelected = _selectedTab == index;
     return GestureDetector(
       onTap: () => setState(() => _selectedTab = index),
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 1.5.h),
         decoration: BoxDecoration(
-          color: isSelected ? theme.colorScheme.primary : theme.colorScheme.surfaceContainerHighest,
+          color: isSelected
+              ? theme.colorScheme.primary
+              : theme.colorScheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -402,13 +459,17 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
             Icon(
               icon,
               size: 20,
-              color: isSelected ? theme.colorScheme.onPrimary : theme.colorScheme.onSurface,
+              color: isSelected
+                  ? theme.colorScheme.onPrimary
+                  : theme.colorScheme.onSurface,
             ),
             SizedBox(width: 2.w),
             Text(
               label,
               style: theme.textTheme.labelLarge?.copyWith(
-                color: isSelected ? theme.colorScheme.onPrimary : theme.colorScheme.onSurface,
+                color: isSelected
+                    ? theme.colorScheme.onPrimary
+                    : theme.colorScheme.onSurface,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -427,12 +488,18 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 3.h),
               decoration: BoxDecoration(
-                border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.3)),
+                border: Border.all(
+                  color: theme.colorScheme.outline.withValues(alpha: 0.3),
+                ),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
                 children: [
-                  Icon(Icons.photo_library_rounded, size: 32, color: theme.colorScheme.primary),
+                  Icon(
+                    Icons.photo_library_rounded,
+                    size: 32,
+                    color: theme.colorScheme.primary,
+                  ),
                   SizedBox(height: 1.h),
                   Text('Choose from Album', style: theme.textTheme.labelMedium),
                 ],
@@ -447,12 +514,18 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 3.h),
               decoration: BoxDecoration(
-                border: Border.all(color: theme.colorScheme.outline.withValues(alpha: 0.3)),
+                border: Border.all(
+                  color: theme.colorScheme.outline.withValues(alpha: 0.3),
+                ),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
                 children: [
-                  Icon(Icons.camera_alt_rounded, size: 32, color: theme.colorScheme.primary),
+                  Icon(
+                    Icons.camera_alt_rounded,
+                    size: 32,
+                    color: theme.colorScheme.primary,
+                  ),
                   SizedBox(height: 1.h),
                   Text('Take Photo', style: theme.textTheme.labelMedium),
                 ],
@@ -535,7 +608,12 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
     );
   }
 
-  Widget _buildVisibilityOption(String value, String label, IconData icon, ThemeData theme) {
+  Widget _buildVisibilityOption(
+    String value,
+    String label,
+    IconData icon,
+    ThemeData theme,
+  ) {
     final isSelected = _visibility == value;
     return GestureDetector(
       onTap: () => setState(() => _visibility = value),
@@ -543,19 +621,33 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
         margin: EdgeInsets.only(bottom: 1.h),
         padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.5.h),
         decoration: BoxDecoration(
-          color: isSelected ? theme.colorScheme.primary.withValues(alpha: 0.1) : Colors.transparent,
+          color: isSelected
+              ? theme.colorScheme.primary.withValues(alpha: 0.1)
+              : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: isSelected ? theme.colorScheme.primary : theme.colorScheme.outline.withValues(alpha: 0.2),
+            color: isSelected
+                ? theme.colorScheme.primary
+                : theme.colorScheme.outline.withValues(alpha: 0.2),
           ),
         ),
         child: Row(
           children: [
-            Icon(icon, size: 20, color: isSelected ? theme.colorScheme.primary : theme.colorScheme.onSurface),
+            Icon(
+              icon,
+              size: 20,
+              color: isSelected
+                  ? theme.colorScheme.primary
+                  : theme.colorScheme.onSurface,
+            ),
             SizedBox(width: 3.w),
             Expanded(child: Text(label, style: theme.textTheme.bodyMedium)),
             if (isSelected)
-              Icon(Icons.check_circle, size: 20, color: theme.colorScheme.primary),
+              Icon(
+                Icons.check_circle,
+                size: 20,
+                color: theme.colorScheme.primary,
+              ),
           ],
         ),
       ),

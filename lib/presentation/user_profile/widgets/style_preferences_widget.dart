@@ -47,10 +47,14 @@ class StylePreferencesWidget extends StatelessWidget {
             children: (userData["stylePreferences"] as List)
                 .map(
                   (pref) => Chip(
-                    label: Text(pref),
-                    backgroundColor: theme.colorScheme.primaryContainer
-                        .withValues(alpha: 0.5),
-                    labelStyle: theme.textTheme.bodySmall,
+                    label: Text(
+                      pref,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: theme.colorScheme.onPrimary,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    backgroundColor: theme.colorScheme.primary,
                   ),
                 )
                 .toList(),
