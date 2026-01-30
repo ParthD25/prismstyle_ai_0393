@@ -249,17 +249,8 @@ class _SocialValidationState extends State<SocialValidation>
         // Custom app bar with SafeArea
         SafeArea(
           bottom: false,
-          child: Container(
+          child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.5.h),
-            decoration: BoxDecoration(
-              color: theme.colorScheme.surface,
-              border: Border(
-                bottom: BorderSide(
-                  color: theme.colorScheme.outline.withValues(alpha: 0.2),
-                  width: 1,
-                ),
-              ),
-            ),
             child: Column(
               children: [
                 Row(
@@ -293,19 +284,23 @@ class _SocialValidationState extends State<SocialValidation>
                 ),
                 SizedBox(height: 1.h),
                 Container(
+                  padding: EdgeInsets.all(0.5.w),
                   decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(10.0),
+                    color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: TabBar(
                     controller: _tabController,
                     indicator: BoxDecoration(
                       color: theme.colorScheme.primary,
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
+                    indicatorSize: TabBarIndicatorSize.tab,
                     labelColor: theme.colorScheme.onPrimary,
-                    unselectedLabelColor: theme.colorScheme.onSurface,
+                    unselectedLabelColor: theme.colorScheme.onSurfaceVariant,
                     dividerColor: Colors.transparent,
+                    labelStyle: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600),
+                    unselectedLabelStyle: theme.textTheme.labelLarge,
                     tabs: const [
                       Tab(text: 'My Posts'),
                       Tab(text: 'Friends\' Feed'),

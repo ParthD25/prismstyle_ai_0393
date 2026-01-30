@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:sensors_plus/sensors_plus.dart';
@@ -41,19 +40,21 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
   // Device tilt values (-1 to 1) from accelerometer
   double _tiltX = 0; // Left/right tilt (roll)
   double _tiltY = 0; // Forward/back tilt (pitch)
-  
+
   // Smoothed values for fluid animation
   double _smoothTiltX = 0;
   double _smoothTiltY = 0;
-  
+
   // Parallax configuration
-  static const double _parallaxAmount = 0.04; // How much the image shifts (tune: 0.02-0.06)
+  static const double _parallaxAmount =
+      0.04; // How much the image shifts (tune: 0.02-0.06)
   static const double _rotationAmount = 0.08; // 3D rotation amount
-  static const double _smoothingFactor = 0.15; // Animation smoothing (lower = smoother)
-  
+  static const double _smoothingFactor =
+      0.15; // Animation smoothing (lower = smoother)
+
   StreamSubscription<AccelerometerEvent>? _accelerometerSubscription;
   late AnimationController _animationController;
-  
+
   @override
   void initState() {
     super.initState();
@@ -61,31 +62,35 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
       vsync: this,
       duration: const Duration(milliseconds: 16), // ~60fps
     )..addListener(_updateSmoothedValues);
-    
+
     _startListeningToSensors();
   }
 
   void _startListeningToSensors() {
     // Listen to accelerometer for device tilt (like the iOS/Android code you provided)
-    _accelerometerSubscription = accelerometerEventStream(
-      samplingPeriod: const Duration(milliseconds: 16), // 60Hz
-    ).listen((AccelerometerEvent event) {
-      // Map accelerometer values to -1..1 range
-      // Similar to: orientations[2] / (Math.PI / 12) in Android
-      // Or: g.x * 1.5 in iOS
-      setState(() {
-        // X axis = roll (left/right tilt) - maps to horizontal parallax
-        _tiltX = (event.x / 9.8 * 1.5).clamp(-1.0, 1.0);
-        // Y axis = pitch (forward/back tilt) - maps to vertical parallax
-        _tiltY = ((event.y - 4.9) / 9.8 * 1.5).clamp(-1.0, 1.0); // Offset for typical phone holding angle
-      });
-      
-      if (!_animationController.isAnimating) {
-        _animationController.forward(from: 0);
-      }
-    });
+    _accelerometerSubscription =
+        accelerometerEventStream(
+          samplingPeriod: const Duration(milliseconds: 16), // 60Hz
+        ).listen((AccelerometerEvent event) {
+          // Map accelerometer values to -1..1 range
+          // Similar to: orientations[2] / (Math.PI / 12) in Android
+          // Or: g.x * 1.5 in iOS
+          setState(() {
+            // X axis = roll (left/right tilt) - maps to horizontal parallax
+            _tiltX = (event.x / 9.8 * 1.5).clamp(-1.0, 1.0);
+            // Y axis = pitch (forward/back tilt) - maps to vertical parallax
+            _tiltY = ((event.y - 4.9) / 9.8 * 1.5).clamp(
+              -1.0,
+              1.0,
+            ); // Offset for typical phone holding angle
+          });
+
+          if (!_animationController.isAnimating) {
+            _animationController.forward(from: 0);
+          }
+        });
   }
-  
+
   void _updateSmoothedValues() {
     // Smooth interpolation for fluid movement (like the iOS Core Image approach)
     setState(() {
@@ -126,9 +131,11 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
     // Calculate parallax offsets based on device tilt
     // This mimics the shader: offset = (depth - 0.5) * tilt * amount
     // We simulate depth layers: background (image) moves opposite to foreground (UI elements)
-    final double imageOffsetX = _smoothTiltX * _parallaxAmount * 100; // Background layer
+    final double imageOffsetX =
+        _smoothTiltX * _parallaxAmount * 100; // Background layer
     final double imageOffsetY = _smoothTiltY * _parallaxAmount * 50;
-    final double foregroundOffsetX = -_smoothTiltX * _parallaxAmount * 30; // Foreground (UI) layer
+    final double foregroundOffsetX =
+        -_smoothTiltX * _parallaxAmount * 30; // Foreground (UI) layer
     final double foregroundOffsetY = -_smoothTiltY * _parallaxAmount * 15;
 
     return GestureDetector(
@@ -143,7 +150,10 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
           ..rotateY(-_smoothTiltX * _rotationAmount), // Roll rotation
         transformAlignment: Alignment.center,
         child: Card(
-          elevation: 4 + (_smoothTiltX.abs() + _smoothTiltY.abs()) * 4, // Dynamic elevation
+          elevation:
+              4 +
+              (_smoothTiltX.abs() + _smoothTiltY.abs()) *
+                  4, // Dynamic elevation
           shadowColor: theme.colorScheme.primary.withValues(alpha: 0.3),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -208,7 +218,7 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                   ),
                 ],
               ),
-              
+
               // FOREGROUND LAYER: UI elements with inverse parallax (moves AGAINST tilt)
               // This creates depth separation between image and floating UI
               Transform.translate(
@@ -222,13 +232,18 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                       child: Container(
                         padding: EdgeInsets.all(1.w),
                         decoration: BoxDecoration(
-                          color: theme.colorScheme.surface.withValues(alpha: 0.95),
+                          color: theme.colorScheme.surface.withValues(
+                            alpha: 0.95,
+                          ),
                           borderRadius: BorderRadius.circular(8),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withValues(alpha: 0.2),
                               blurRadius: 4,
-                              offset: Offset(_smoothTiltX * 2, _smoothTiltY * 2),
+                              offset: Offset(
+                                _smoothTiltX * 2,
+                                _smoothTiltY * 2,
+                              ),
                             ),
                           ],
                         ),
@@ -241,7 +256,7 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                         ),
                       ),
                     ),
-                    
+
                     // Favorite button (foreground)
                     Positioned(
                       top: 2.w,
@@ -251,18 +266,25 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                         child: Container(
                           padding: EdgeInsets.all(1.w),
                           decoration: BoxDecoration(
-                            color: theme.colorScheme.surface.withValues(alpha: 0.95),
+                            color: theme.colorScheme.surface.withValues(
+                              alpha: 0.95,
+                            ),
                             shape: BoxShape.circle,
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withValues(alpha: 0.2),
                                 blurRadius: 4,
-                                offset: Offset(_smoothTiltX * 2, _smoothTiltY * 2),
+                                offset: Offset(
+                                  _smoothTiltX * 2,
+                                  _smoothTiltY * 2,
+                                ),
                               ),
                             ],
                           ),
                           child: CustomIconWidget(
-                            iconName: isFavorite ? 'favorite' : 'favorite_border',
+                            iconName: isFavorite
+                                ? 'favorite'
+                                : 'favorite_border',
                             color: isFavorite
                                 ? theme.colorScheme.error
                                 : theme.colorScheme.onSurfaceVariant,
@@ -271,7 +293,7 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                         ),
                       ),
                     ),
-                    
+
                     // Selection checkbox (foreground)
                     if (widget.isSelectionMode)
                       Positioned(
@@ -282,7 +304,9 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                           decoration: BoxDecoration(
                             color: widget.isSelected
                                 ? theme.colorScheme.primary
-                                : theme.colorScheme.surface.withValues(alpha: 0.95),
+                                : theme.colorScheme.surface.withValues(
+                                    alpha: 0.95,
+                                  ),
                             shape: BoxShape.circle,
                             border: Border.all(
                               color: theme.colorScheme.primary,
@@ -292,7 +316,10 @@ class _WardrobeItemCardState extends State<WardrobeItemCard>
                               BoxShadow(
                                 color: Colors.black.withValues(alpha: 0.2),
                                 blurRadius: 4,
-                                offset: Offset(_smoothTiltX * 2, _smoothTiltY * 2),
+                                offset: Offset(
+                                  _smoothTiltX * 2,
+                                  _smoothTiltY * 2,
+                                ),
                               ),
                             ],
                           ),
