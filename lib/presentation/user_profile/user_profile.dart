@@ -59,144 +59,146 @@ class _UserProfileState extends State<UserProfile> {
                 ),
               ),
               child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Profile',
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.w600,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Profile',
+                    style: theme.textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                IconButton(
-                  icon: CustomIconWidget(
-                    iconName: 'settings',
-                    color: theme.colorScheme.onSurface,
-                    size: 24,
+                  IconButton(
+                    icon: CustomIconWidget(
+                      iconName: 'settings',
+                      color: theme.colorScheme.onSurface,
+                      size: 24,
+                    ),
+                    onPressed: () => _showSettingsSheet(context),
                   ),
-                  onPressed: () => _showSettingsSheet(context),
-                ),
-              ],
-            ),
+                ],
+              ),
             ),
 
             // Scrollable content
             Expanded(
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Profile Header
-                ProfileHeaderWidget(userData: userData),
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Profile Header
+                    ProfileHeaderWidget(userData: userData),
 
-                SizedBox(height: 2.h),
+                    SizedBox(height: 2.h),
 
-                // Metrics Cards
-                MetricsCardWidget(userData: userData),
+                    // Metrics Cards
+                    MetricsCardWidget(userData: userData),
 
-                SizedBox(height: 3.h),
+                    SizedBox(height: 3.h),
 
-                // Style Preferences Section
-                StylePreferencesWidget(userData: userData),
+                    // Style Preferences Section
+                    StylePreferencesWidget(userData: userData),
 
-                SizedBox(height: 2.h),
+                    SizedBox(height: 2.h),
 
-                // Privacy Controls Section
-                SettingsSectionWidget(
-                  title: 'Privacy Controls',
-                  items: [
-                    {
-                      'icon': 'share',
-                      'title': 'Social Sharing',
-                      'subtitle': 'Control outfit sharing permissions',
-                      'onTap': () => _navigateToSocialSettings(),
-                    },
-                    {
-                      'icon': 'data_usage',
-                      'title': 'Data Usage',
-                      'subtitle': 'Manage your data preferences',
-                      'onTap': () => _navigateToDataSettings(),
-                    },
-                    {
-                      'icon': 'fingerprint',
-                      'title': 'Biometric Authentication',
-                      'subtitle': userData['biometricEnabled'] == true
-                          ? 'Enabled'
-                          : 'Disabled',
-                      'onTap': () => _toggleBiometric(),
-                    },
-                  ],
-                ),
+                    // Privacy Controls Section
+                    SettingsSectionWidget(
+                      title: 'Privacy Controls',
+                      items: [
+                        {
+                          'icon': 'share',
+                          'title': 'Social Sharing',
+                          'subtitle': 'Control outfit sharing permissions',
+                          'onTap': () => _navigateToSocialSettings(),
+                        },
+                        {
+                          'icon': 'data_usage',
+                          'title': 'Data Usage',
+                          'subtitle': 'Manage your data preferences',
+                          'onTap': () => _navigateToDataSettings(),
+                        },
+                        {
+                          'icon': 'fingerprint',
+                          'title': 'Biometric Authentication',
+                          'subtitle': userData['biometricEnabled'] == true
+                              ? 'Enabled'
+                              : 'Disabled',
+                          'onTap': () => _toggleBiometric(),
+                        },
+                      ],
+                    ),
 
-                SizedBox(height: 2.h),
+                    SizedBox(height: 2.h),
 
-                // App Preferences Section
-                SettingsSectionWidget(
-                  title: 'App Preferences',
-                  items: [
-                    {
-                      'icon': 'straighten',
-                      'title': 'Measurement Units',
-                      'subtitle': userData['measurementUnit'] as String,
-                      'onTap': () => _navigateToMeasurementSettings(),
-                    },
-                    {
-                      'icon': 'location_on',
-                      'title': 'Weather Location',
-                      'subtitle': userData['weatherLocation'] as String,
-                      'onTap': () => _navigateToLocationSettings(),
-                    },
-                  ],
-                ),
+                    // App Preferences Section
+                    SettingsSectionWidget(
+                      title: 'App Preferences',
+                      items: [
+                        {
+                          'icon': 'straighten',
+                          'title': 'Measurement Units',
+                          'subtitle': userData['measurementUnit'] as String,
+                          'onTap': () => _navigateToMeasurementSettings(),
+                        },
+                        {
+                          'icon': 'location_on',
+                          'title': 'Weather Location',
+                          'subtitle': userData['weatherLocation'] as String,
+                          'onTap': () => _navigateToLocationSettings(),
+                        },
+                      ],
+                    ),
 
-                SizedBox(height: 3.h),
+                    SizedBox(height: 3.h),
 
-                // Sign Out Button
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 4.w),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton(
-                      onPressed: () => _showSignOutDialog(),
-                      style: OutlinedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(vertical: 2.h),
-                        side: BorderSide(
-                          color: theme.colorScheme.error,
-                          width: 1.5,
-                        ),
-                      ),
-                      child: Text(
-                        'Sign Out',
-                        style: theme.textTheme.labelLarge?.copyWith(
-                          color: theme.colorScheme.error,
+                    // Sign Out Button
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 4.w),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton(
+                          onPressed: () => _showSignOutDialog(),
+                          style: OutlinedButton.styleFrom(
+                            padding: EdgeInsets.symmetric(vertical: 2.h),
+                            side: BorderSide(
+                              color: theme.colorScheme.error,
+                              width: 1.5,
+                            ),
+                          ),
+                          child: Text(
+                            'Sign Out',
+                            style: theme.textTheme.labelLarge?.copyWith(
+                              color: theme.colorScheme.error,
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ),
 
-                SizedBox(height: 2.h),
+                    SizedBox(height: 2.h),
 
-                // Delete Account Button
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 4.w),
-                  child: TextButton(
-                    onPressed: () => _showDeleteAccountDialog(),
-                    child: Text(
-                      'Delete Account',
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        color: theme.colorScheme.error.withValues(alpha: 0.7),
-                        decoration: TextDecoration.underline,
+                    // Delete Account Button
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 4.w),
+                      child: TextButton(
+                        onPressed: () => _showDeleteAccountDialog(),
+                        child: Text(
+                          'Delete Account',
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: theme.colorScheme.error.withValues(
+                              alpha: 0.7,
+                            ),
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                ),
 
-                SizedBox(height: 4.h),
-              ],
+                    SizedBox(height: 4.h),
+                  ],
+                ),
+              ),
             ),
-          ),
-        ),
           ],
         ),
       ),

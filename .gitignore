@@ -13,6 +13,23 @@
 migrate_working_dir/
 pubspec.lock
 
+# macOS
+.DS_Store
+**/.DS_Store
+*.xcuserstate
+
+# Xcode
+xcuserdata/
+**/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+DerivedData/
+**/DerivedData/
+*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
 # IntelliJ related
 *.iml
 *.ipr

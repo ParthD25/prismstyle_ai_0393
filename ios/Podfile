@@ -1,5 +1,6 @@
-# iOS 18+ minimum deployment target for PrismStyle AI
-platform :ios, '18.0'
+# iOS 15.0 minimum deployment target for PrismStyle AI
+# Targets iPhone 6S and later, enabling unified AI module features
+platform :ios, '15.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'

@@ -286,7 +286,9 @@ class _SocialValidationState extends State<SocialValidation>
                 Container(
                   padding: EdgeInsets.all(0.5.w),
                   decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
+                    color: theme.colorScheme.surfaceContainerHighest.withValues(
+                      alpha: 0.5,
+                    ),
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: TabBar(
@@ -299,7 +301,9 @@ class _SocialValidationState extends State<SocialValidation>
                     labelColor: theme.colorScheme.onPrimary,
                     unselectedLabelColor: theme.colorScheme.onSurfaceVariant,
                     dividerColor: Colors.transparent,
-                    labelStyle: theme.textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600),
+                    labelStyle: theme.textTheme.labelLarge?.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
                     unselectedLabelStyle: theme.textTheme.labelLarge,
                     tabs: const [
                       Tab(text: 'My Posts'),
