@@ -145,6 +145,25 @@ class LocationService {
       final locations = await locationFromAddress(cityName);
       if (locations.isNotEmpty) {
         final location = locations.first;
+
+        // Reverse geocode to get full address details
+        final placemarks = await placemarkFromCoordinates(
+          location.latitude,
+          location.longitude,
+        );
+
+        if (placemarks.isNotEmpty) {
+          final placemark = placemarks.first;
+          return LocationData(
+            latitude: location.latitude,
+            longitude: location.longitude,
+            city: placemark.locality ?? cityName.split(',').first.trim(),
+            country: placemark.country ?? '',
+            state: placemark.administrativeArea ?? '',
+            postalCode: placemark.postalCode ?? '',
+          );
+        }
+
         return LocationData(
           latitude: location.latitude,
           longitude: location.longitude,
@@ -156,6 +175,40 @@ class LocationService {
     } catch (e) {
       debugPrint('Error geocoding city name: $e');
       return null;
+    }
+  }
+
+  /// Search for multiple location matches (for disambiguation)
+  Future<List<LocationData>> searchLocations(String query) async {
+    try {
+      final locations = await locationFromAddress(query);
+      final results = <LocationData>[];
+
+      for (final location in locations.take(5)) {
+        final placemarks = await placemarkFromCoordinates(
+          location.latitude,
+          location.longitude,
+        );
+
+        if (placemarks.isNotEmpty) {
+          final placemark = placemarks.first;
+          results.add(
+            LocationData(
+              latitude: location.latitude,
+              longitude: location.longitude,
+              city: placemark.locality ?? query.split(',').first.trim(),
+              country: placemark.country ?? '',
+              state: placemark.administrativeArea ?? '',
+              postalCode: placemark.postalCode ?? '',
+            ),
+          );
+        }
+      }
+
+      return results;
+    } catch (e) {
+      debugPrint('Error searching locations: $e');
+      return [];
     }
   }
 

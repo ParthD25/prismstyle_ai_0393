@@ -3,6 +3,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../core/app_export.dart';
 import '../../widgets/custom_app_bar.dart';
+import '../../widgets/shimmer_loading.dart';
 import './widgets/category_filter_chip.dart';
 import './widgets/empty_category_widget.dart';
 import './widgets/wardrobe_item_card.dart';
@@ -19,6 +20,7 @@ class _WardrobeManagementState extends State<WardrobeManagement> {
   String _selectedCategory = 'All';
   final Set<String> _selectedItems = {};
   bool _isSelectionMode = false;
+  bool _isLoading = true;
   // ignore: unused_field - Reserved for pull-to-refresh feature
   bool _isRefreshing = false;
 
@@ -176,6 +178,20 @@ class _WardrobeManagementState extends State<WardrobeManagement> {
     }
 
     return filtered;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loadWardrobeItems();
+  }
+
+  Future<void> _loadWardrobeItems() async {
+    // Simulate loading wardrobe items
+    await Future.delayed(const Duration(milliseconds: 800));
+    if (mounted) {
+      setState(() => _isLoading = false);
+    }
   }
 
   @override
@@ -614,7 +630,31 @@ class _WardrobeManagementState extends State<WardrobeManagement> {
                     ],
                   ),
                 ),
-                filteredItems.isEmpty
+                _isLoading
+                    ? SliverPadding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 4.w,
+                          vertical: 2.h,
+                        ),
+                        sliver: SliverGrid(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount:
+                                    MediaQuery.of(context).orientation ==
+                                        Orientation.portrait
+                                    ? 2
+                                    : 3,
+                                crossAxisSpacing: 3.w,
+                                mainAxisSpacing: 2.h,
+                                childAspectRatio: 0.75,
+                              ),
+                          delegate: SliverChildBuilderDelegate(
+                            (context, index) => const ShimmerWardrobeCard(),
+                            childCount: 6,
+                          ),
+                        ),
+                      )
+                    : filteredItems.isEmpty
                     ? SliverFillRemaining(
                         child: EmptyCategoryWidget(category: _selectedCategory),
                       )

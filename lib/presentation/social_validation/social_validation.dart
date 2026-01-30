@@ -246,29 +246,32 @@ class _SocialValidationState extends State<SocialValidation>
 
     return Column(
       children: [
-        // Custom app bar
-        Container(
-          padding: EdgeInsets.only(
-            top: MediaQuery.of(context).padding.top,
-            left: 4.w,
-            right: 4.w,
-            bottom: 1.h,
-          ),
-          decoration: BoxDecoration(
-            color: theme.colorScheme.surface,
-            border: Border(
-              bottom: BorderSide(
-                color: theme.colorScheme.outline.withValues(alpha: 0.2),
-                width: 1,
+        // Custom app bar with SafeArea
+        SafeArea(
+          bottom: false,
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 5.w,
+              vertical: 1.5.h,
+            ),
+            decoration: BoxDecoration(
+              color: theme.colorScheme.surface,
+              border: Border(
+                bottom: BorderSide(
+                  color: theme.colorScheme.outline.withValues(alpha: 0.2),
+                  width: 1,
+                ),
               ),
             ),
-          ),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Social', style: theme.textTheme.headlineSmall),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 1.w),
+                      child: Text('Social', style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600)),
+                    ),
                   IconButton(
                     icon: CustomIconWidget(
                       iconName: 'notifications_outlined',
@@ -311,6 +314,7 @@ class _SocialValidationState extends State<SocialValidation>
                 ),
               ),
             ],
+          ),
           ),
         ),
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import './widgets/onboarding_page_widget.dart';
 
@@ -83,11 +84,17 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
     _completeOnboarding();
   }
 
-  void _completeOnboarding() {
-    Navigator.of(
-      context,
-      rootNavigator: true,
-    ).pushReplacementNamed('/home-dashboard');
+  Future<void> _completeOnboarding() async {
+    // Save that onboarding has been completed
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('hasCompletedOnboarding', true);
+    
+    if (mounted) {
+      Navigator.of(
+        context,
+        rootNavigator: true,
+      ).pushReplacementNamed('/home-dashboard');
+    }
   }
 
   @override

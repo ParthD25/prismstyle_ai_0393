@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/app_export.dart';
 import '../../widgets/custom_icon_widget.dart';
@@ -97,21 +98,23 @@ class _SplashScreenState extends State<SplashScreen>
     }
   }
 
-  void _navigateToNextScreen() {
-    // Check authentication status and navigate accordingly
+  Future<void> _navigateToNextScreen() async {
+    // Check if first time user
+    await _checkFirstTimeUser();
     final bool isAuthenticated = _checkAuthStatus();
-    final bool isFirstTime = _checkFirstTimeUser();
 
     String nextRoute;
-    if (isFirstTime) {
+    if (_isFirstTimeUser) {
       nextRoute = '/onboarding-flow';
     } else if (isAuthenticated) {
       nextRoute = '/home-dashboard';
     } else {
-      nextRoute = '/onboarding-flow';
+      nextRoute = '/home-dashboard';
     }
 
-    Navigator.of(context, rootNavigator: true).pushReplacementNamed(nextRoute);
+    if (mounted) {
+      Navigator.of(context, rootNavigator: true).pushReplacementNamed(nextRoute);
+    }
   }
 
   bool _checkAuthStatus() {
@@ -119,9 +122,11 @@ class _SplashScreenState extends State<SplashScreen>
     return false;
   }
 
-  bool _checkFirstTimeUser() {
-    // Simulate first-time user check
-    return true;
+  bool _isFirstTimeUser = true;
+
+  Future<void> _checkFirstTimeUser() async {
+    final prefs = await SharedPreferences.getInstance();
+    _isFirstTimeUser = !(prefs.getBool('hasCompletedOnboarding') ?? false);
   }
 
   @override

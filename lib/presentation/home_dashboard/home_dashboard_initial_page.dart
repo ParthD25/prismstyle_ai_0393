@@ -4,6 +4,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../core/app_export.dart';
 import '../../widgets/custom_icon_widget.dart';
+import '../../widgets/shimmer_loading.dart';
 import '../../services/location_service.dart';
 import '../../services/weather_service.dart';
 import './widgets/outfit_recommendation_card_widget.dart';
@@ -322,7 +323,7 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
               child: _isLoading
                   ? _buildSkeletonLoader()
                   : SizedBox(
-                      height: 42.h,
+                      height: 48.h,
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         padding: EdgeInsets.symmetric(horizontal: 4.w),
@@ -424,24 +425,7 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
   }
 
   Widget _buildSkeletonLoader() {
-    return SizedBox(
-      height: 42.h,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.symmetric(horizontal: 4.w),
-        itemCount: 3,
-        separatorBuilder: (context, index) => SizedBox(width: 3.w),
-        itemBuilder: (context, index) {
-          return Container(
-            width: 70.w,
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surface,
-              borderRadius: BorderRadius.circular(12),
-            ),
-          );
-        },
-      ),
-    );
+    return const ShimmerOutfitList(itemCount: 3);
   }
 
   void _showQuickActions(BuildContext context, Map<String, dynamic> outfit) {

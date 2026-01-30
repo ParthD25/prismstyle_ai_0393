@@ -41,7 +41,7 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
           children: [
             // Outfit Images Stack
             Expanded(
-              flex: 3,
+              flex: 5,
               child: Container(
                 decoration: BoxDecoration(
                   color: theme.colorScheme.surfaceContainerHighest,
@@ -77,7 +77,7 @@ class OutfitRecommendationCardWidget extends StatelessWidget {
 
             // Outfit Details
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.w),
                 child: Column(
