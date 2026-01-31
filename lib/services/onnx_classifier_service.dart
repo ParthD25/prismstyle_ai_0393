@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math' as math;
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -307,7 +308,7 @@ class ONNXClassifierService {
 
   /// Simple exponential function
   double exp(double x) {
-    return 2.718281828459045.toDouble().pow(x);
+    return math.exp(x);
   }
 
   /// Get model status information
@@ -369,20 +370,3 @@ class ONNXClassificationResult {
   }
 }
 
-/// Extension for double pow
-extension DoubleExtension on double {
-  double pow(double exponent) {
-    if (exponent == 0) return 1.0;
-    if (exponent == 1) return this;
-
-    double result = 1.0;
-    double base = this;
-    int exp = exponent.abs().toInt();
-
-    for (int i = 0; i < exp; i++) {
-      result *= base;
-    }
-
-    return exponent < 0 ? 1.0 / result : result;
-  }
-}

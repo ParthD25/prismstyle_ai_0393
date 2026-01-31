@@ -482,7 +482,7 @@ public final class UserLearning {
     
     // MARK: - Helpers
     
-    static func currentTimeOfDay() -> String {
+    public static func currentTimeOfDay() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
         switch hour {
         case 5..<12: return "morning"

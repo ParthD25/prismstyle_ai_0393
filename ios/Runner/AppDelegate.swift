@@ -2,13 +2,13 @@ import UIKit
 import Flutter
 import VisionKit
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
   
   // Apple Vision and Core ML handlers (legacy, kept for compatibility)
   private var appleVisionHandler: AppleVisionHandler?
   private var coreMLHandler: CoreMLHandler?
-  private var visualIntelligenceHandler: VisualIntelligenceHandler?
+  private var visualIntelligenceHandler: Any?
   private var fashionAIHandler: FashionAIHandler?
   
   // New Unified AI Module (iOS 15+)
@@ -135,7 +135,7 @@ import VisionKit
       )
       
       visualIntelligenceChannel.setMethodCallHandler { [weak self] (call, result) in
-        self?.visualIntelligenceHandler?.handleMethodCall(call, result: result)
+        (self?.visualIntelligenceHandler as? VisualIntelligenceHandler)?.handleMethodCall(call, result: result)
       }
       
       print("✅ Visual Intelligence MethodChannel registered (iPhone 16+)")

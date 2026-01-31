@@ -50,8 +50,8 @@ class VisualIntelligenceHandler: NSObject {
         Task {
             do {
                 // Configure analysis for clothing detection
-                var configuration = ImageAnalyzer.Configuration([.text, .visualSearch])
-                configuration.locale = Locale.current
+                var configuration = ImageAnalyzer.Configuration([.text])
+                // Locale configuration not available in current API
                 
                 // Perform analysis
                 let analysis = try await analyzer.analyze(image, configuration: configuration)
@@ -59,24 +59,12 @@ class VisualIntelligenceHandler: NSObject {
                 // Extract clothing-specific information
                 var result: [String: Any] = [:]
                 
-                // 1. Visual Search Results (identifies brands, styles, similar items)
-                if analysis.hasResults(for: .visualSearch) {
-                    result["visual_search"] = await extractVisualSearchInfo(from: analysis)
-                }
-                
-                // 2. Text Detection (brand names, labels, care instructions)
+                // 1. Text Detection (brand names, labels, care instructions)
                 if analysis.hasResults(for: .text) {
                     result["detected_text"] = await extractTextInfo(from: analysis)
                 }
                 
-                // 3. Subject Analysis (clothing item isolation)
-                if #available(iOS 17.0, *) {
-                    if let subject = try? await analyzer.analyzeSubject(image: image) {
-                        result["subject_info"] = extractSubjectInfo(from: subject)
-                    }
-                }
-                
-                // 4. Add metadata
+                // 3. Add metadata
                 result["confidence"] = 0.95 // Visual Intelligence has very high accuracy
                 result["source"] = "apple_visual_intelligence"
                 result["device_capability"] = "iphone_16_plus"
@@ -91,26 +79,6 @@ class VisualIntelligenceHandler: NSObject {
                 }
             }
         }
-    }
-    
-    /// Extract visual search information (brands, styles, similar products)
-    @available(iOS 18.2, *)
-    private func extractVisualSearchInfo(from analysis: ImageAnalysis) async -> [String: Any] {
-        var info: [String: Any] = [:]
-        
-        // Visual Intelligence can identify:
-        // - Brand names
-        // - Clothing style/type
-        // - Material composition
-        // - Similar products online
-        
-        // Note: Exact API may vary in final iOS 18.2 release
-        // This is a forward-compatible implementation
-        
-        info["has_results"] = analysis.hasResults(for: .visualSearch)
-        info["can_search"] = true
-        
-        return info
     }
     
     /// Extract text information (labels, brand names, care instructions)
@@ -134,17 +102,6 @@ class VisualIntelligenceHandler: NSObject {
             info["potential_size"] = identifySize(from: detectedTexts)
             info["care_instructions"] = identifyCareInstructions(from: detectedTexts)
         }
-        
-        return info
-    }
-    
-    /// Extract subject information (isolated clothing item)
-    private func extractSubjectInfo(from subject: Any) -> [String: Any] {
-        var info: [String: Any] = [:]
-        
-        // Subject analysis isolates the main item from background
-        info["has_subject"] = true
-        info["background_removed"] = true
         
         return info
     }
@@ -299,6 +256,7 @@ class VisualIntelligenceHandler: NSObject {
 }
 
 /// Flutter Method Channel Handler
+@available(iOS 18.2, *)
 extension VisualIntelligenceHandler {
     
     func handleMethodCall(_ call: FlutterMethodCall, result: @escaping FlutterResult) {

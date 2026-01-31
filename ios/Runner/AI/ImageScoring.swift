@@ -382,8 +382,13 @@ public final class ImageScoring {
                 // Get mask coverage
                 do {
                     let allInstances = observation.allInstances
-                    let mask = try observation.generateScaledMaskForImage(forInstances: allInstances, from: request)
-                    maskImage = mask.cgImage
+                    let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+                    let mask = try observation.generateScaledMaskForImage(forInstances: allInstances, from: handler)
+                    
+                    // Convert CVPixelBuffer to CGImage
+                    let ciImage = CIImage(cvPixelBuffer: mask)
+                    let context = CIContext()
+                    maskImage = context.createCGImage(ciImage, from: ciImage.extent)
                     
                     // Calculate foreground coverage
                     if let maskCG = maskImage {

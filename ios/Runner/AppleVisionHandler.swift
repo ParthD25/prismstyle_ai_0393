@@ -96,8 +96,7 @@ class AppleVisionHandler: NSObject {
         }
         
         // Configure request for best quality
-        request.imageCropAndScaleOption = .scaleFit
-        if #available(iOS 15.0, *) {
+        if #available(iOS 17.0, *) {
             request.revision = VNClassifyImageRequestRevision2
         }
         

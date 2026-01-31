@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import '../models/wardrobe_item.dart';
 import './context_aware_outfit_service.dart';
 import './wardrobe_service.dart';
+import './personalized_learning_service.dart';
 
 /// Outfit Generation Service
 ///
@@ -21,6 +22,8 @@ class OutfitGenerationService {
   final WardrobeService _wardrobeService = WardrobeService.instance;
   final ContextAwareOutfitService _contextService =
       ContextAwareOutfitService.instance;
+  final PersonalizedLearningService _learningService =
+      PersonalizedLearningService.instance;
 
   /// Generate personalized outfit recommendations
   ///
@@ -334,18 +337,69 @@ class OutfitGenerationService {
 
   /// Calculate personal preference score based on user's history
   ///
-  /// THIS IS KEY FOR PERSONALIZATION - uses user's actual preferences
+  /// THIS IS KEY FOR PERSONALIZATION - uses ML-learned preferences from feedback
   double _calculatePersonalPreference(
     List<WardrobeItem> items,
     Map<String, dynamic> userPrefs,
   ) {
-    double score = 0.7; // Base score
+    double score = 0.5; // Start neutral
+    int components = 0;
 
-    // Check favorite items
+    // 1. Use ML-learned preferences from feedback service
+    final mlScore = _learningService.calculateOutfitScore(
+      items,
+      occasion: userPrefs['occasion'] as String?,
+    );
+    score += mlScore;
+    components++;
+
+    // 2. Check favorite items (user-marked)
     final favCount = items.where((item) => item.isFavorite).length;
-    score += (favCount * 0.1).clamp(0.0, 0.2);
+    if (favCount > 0) {
+      score += (favCount * 0.15).clamp(0.0, 0.3);
+      components++;
+    }
 
-    // Check favorite colors
+    // 3. Use learned color preferences
+    double colorScore = 0;
+    for (final item in items) {
+      if (item.color != null) {
+        colorScore += _learningService.getColorScore(item.color);
+      }
+    }
+    if (items.isNotEmpty) {
+      score += colorScore / items.length;
+      components++;
+    }
+
+    // 4. Use learned style preferences
+    double styleScore = 0;
+    for (final item in items) {
+      if (item.style != null) {
+        styleScore += _learningService.getStyleScore(item.style);
+      }
+    }
+    final itemsWithStyle = items.where((i) => i.style != null).length;
+    if (itemsWithStyle > 0) {
+      score += styleScore / itemsWithStyle;
+      components++;
+    }
+
+    // 5. Use learned item pair compatibility
+    double pairScore = 0;
+    int pairs = 0;
+    for (int i = 0; i < items.length; i++) {
+      for (int j = i + 1; j < items.length; j++) {
+        pairScore += _learningService.getItemPairScore(items[i].id, items[j].id);
+        pairs++;
+      }
+    }
+    if (pairs > 0) {
+      score += pairScore / pairs;
+      components++;
+    }
+
+    // 6. Fallback: use explicitly passed preferences
     final favoriteColors =
         (userPrefs['favorite_colors'] as List?)?.cast<String>() ?? [];
     if (favoriteColors.isNotEmpty) {
@@ -356,7 +410,6 @@ class OutfitGenerationService {
       }
     }
 
-    // Check preferred styles
     final preferredStyles =
         (userPrefs['preferred_styles'] as List?)?.cast<String>() ?? [];
     if (preferredStyles.isNotEmpty) {
@@ -367,7 +420,7 @@ class OutfitGenerationService {
       }
     }
 
-    return score.clamp(0.0, 1.0);
+    return components > 0 ? (score / components).clamp(0.0, 1.0) : 0.5;
   }
 
   /// Calculate wear history score (promote underutilized items)
@@ -445,6 +498,27 @@ class OutfitGenerationService {
     };
 
     return colorMap[colorName] ?? {'h': 0.0, 's': 0.5, 'v': 0.7};
+  }
+
+  /// Record user feedback on an outfit (thumbs up/down)
+  /// This trains the ML personalization system
+  Future<void> recordOutfitFeedback({
+    required List<WardrobeItem> items,
+    required bool isPositive,
+    String? occasion,
+    Map<String, dynamic>? context,
+  }) async {
+    await _learningService.recordFeedback(
+      items: items,
+      isPositive: isPositive,
+      occasion: occasion,
+      context: context,
+    );
+  }
+
+  /// Get personalization summary for debugging
+  Map<String, dynamic> getPersonalizationSummary() {
+    return _learningService.getPersonalizationSummary();
   }
 }
 

@@ -81,6 +81,7 @@ public final class CompatibilityEngine {
         case edgy
         case sporty
         case vintage
+        case formal
     }
     
     /// Wardrobe item with all scoring attributes
