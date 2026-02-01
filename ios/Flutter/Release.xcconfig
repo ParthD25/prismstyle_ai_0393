@@ -1,2 +1,5 @@
-#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include? "../Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
 #include "Generated.xcconfig"
+
+// Force Rosetta (x86_64) on Simulator to avoid MLImage slice conflicts
+EXCLUDED_ARCHS[sdk=iphonesimulator*]=$(inherited) i386 arm64

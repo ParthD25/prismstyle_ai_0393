@@ -1,0 +1,940 @@
+Resolving dependencies...
+Downloading packages...
+  app_links 6.4.1 (7.0.0 available)
+  camera 0.10.6 (0.11.3 available)
+  characters 1.4.0 (1.4.1 available)
+  connectivity_plus 6.1.5 (7.0.0 available)
+  fl_chart 0.65.0 (1.1.1 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  flutter_local_notifications 18.0.1 (20.0.0 available)
+  flutter_local_notifications_linux 5.0.0 (7.0.0 available)
+  flutter_local_notifications_platform_interface 8.0.0 (10.0.0 available)
+  flutter_secure_storage 9.2.4 (10.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.0 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.0 available)
+  flutter_secure_storage_windows 3.1.2 (4.1.0 available)
+  fluttertoast 8.2.14 (9.0.0 available)
+  geocoding 2.2.2 (4.0.0 available)
+  geocoding_android 3.3.1 (4.0.1 available)
+  geocoding_ios 2.3.0 (3.1.0 available)
+  geocoding_platform_interface 3.2.0 (5.0.0 available)
+  geolocator 10.1.1 (14.0.2 available)
+  geolocator_android 4.6.2 (5.0.2 available)
+  geolocator_web 2.2.1 (4.1.3 available)
+  google_fonts 6.3.3 (8.0.0 available)
+  js 0.6.7 (0.7.2 available)
+  lints 5.1.1 (6.1.0 available)
+  matcher 0.12.17 (0.12.18 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  meta 1.17.0 (1.18.1 available)
+  mime 1.0.6 (2.0.0 available)
+  permission_handler 11.4.0 (12.0.1 available)
+  permission_handler_android 12.1.0 (13.0.1 available)
+  sensors_plus 4.0.2 (7.0.0 available)
+  sensors_plus_platform_interface 1.2.0 (2.0.1 available)
+  share_plus 7.2.2 (12.0.1 available)
+  share_plus_platform_interface 3.4.0 (6.1.0 available)
+  sizer 2.0.15 (3.1.3 available)
+  test_api 0.7.7 (0.7.9 available)
+  tflite_flutter 0.11.0 (0.12.1 available)
+  timezone 0.10.1 (0.11.0 available)
+Got dependencies!
+40 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.
+Building com.prismstyleai.prismstyleAi for device (ios-release)...
+Running pod install...                                              4.3s
+CocoaPods' output:
+↳
+      Preparing
+
+    Analyzing dependencies
+
+    Inspecting targets to integrate
+      Using `ARCHS` setting to build architectures of target `Pods-Runner`: (``)
+
+    Finding Podfile changes
+      A GoogleMLKit
+      - Flutter
+      - app_links
+      - camera_avfoundation
+      - connectivity_plus
+      - emoji_picker_flutter
+      - flutter_image_compress_common
+      - flutter_local_notifications
+      - flutter_secure_storage
+      - fluttertoast
+      - geocoding_ios
+      - geolocator_apple
+      - image_picker_ios
+      - onnxruntime
+      - permission_handler_apple
+      - sensors_plus
+      - share_plus
+      - shared_preferences_foundation
+      - sqflite_darwin
+      - tflite_flutter
+      - url_launcher_ios
+
+    Fetching external sources
+    -> Fetching podspec for `Flutter` from `Flutter`
+    -> Fetching podspec for `app_links` from `.symlinks/plugins/app_links/ios`
+    -> Fetching podspec for `camera_avfoundation` from `.symlinks/plugins/camera_avfoundation/ios`
+    -> Fetching podspec for `connectivity_plus` from `.symlinks/plugins/connectivity_plus/ios`
+    -> Fetching podspec for `emoji_picker_flutter` from `.symlinks/plugins/emoji_picker_flutter/ios`
+    -> Fetching podspec for `flutter_image_compress_common` from `.symlinks/plugins/flutter_image_compress_common/ios`
+    -> Fetching podspec for `flutter_local_notifications` from `.symlinks/plugins/flutter_local_notifications/ios`
+    -> Fetching podspec for `flutter_secure_storage` from `.symlinks/plugins/flutter_secure_storage/ios`
+    -> Fetching podspec for `fluttertoast` from `.symlinks/plugins/fluttertoast/ios`
+    -> Fetching podspec for `geocoding_ios` from `.symlinks/plugins/geocoding_ios/ios`
+    -> Fetching podspec for `geolocator_apple` from `.symlinks/plugins/geolocator_apple/darwin`
+    -> Fetching podspec for `image_picker_ios` from `.symlinks/plugins/image_picker_ios/ios`
+    -> Fetching podspec for `onnxruntime` from `.symlinks/plugins/onnxruntime/ios`
+    -> Fetching podspec for `permission_handler_apple` from `.symlinks/plugins/permission_handler_apple/ios`
+    -> Fetching podspec for `sensors_plus` from `.symlinks/plugins/sensors_plus/ios`
+    -> Fetching podspec for `share_plus` from `.symlinks/plugins/share_plus/ios`
+    -> Fetching podspec for `shared_preferences_foundation` from `.symlinks/plugins/shared_preferences_foundation/darwin`
+    -> Fetching podspec for `sqflite_darwin` from `.symlinks/plugins/sqflite_darwin/darwin`
+    -> Fetching podspec for `tflite_flutter` from `.symlinks/plugins/tflite_flutter/ios`
+    -> Fetching podspec for `url_launcher_ios` from `.symlinks/plugins/url_launcher_ios/ios`
+
+    Resolving dependencies of `Podfile`
+      CDN: trunk Relative path: CocoaPods-version.yml exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_b_e_b.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/b/e/b/GoogleMLKit/9.0.0/GoogleMLKit.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/b/e/b/GoogleMLKit/3.2.0/GoogleMLKit.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_5_d_c.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/5/d/c/Mantle/2.2.0/Mantle.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_1_1_7.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/1/7/SDWebImage/5.21.5/SDWebImage.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_e_9_d.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/9/d/SDWebImageWebPCoder/0.15.0/SDWebImageWebPCoder.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_4_2_c.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/3.16.0/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_d_9_6.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/d/9/6/TensorFlowLiteSwift/2.17.0/TensorFlowLiteSwift.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/d/9/6/TensorFlowLiteSwift/2.12.0/TensorFlowLiteSwift.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/d/9/6/TensorFlowLiteSwift/2.12.0/TensorFlowLiteSwift.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_8_2_b.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/2/b/onnxruntime-objc/1.23.0/onnxruntime-objc.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/9/d/SDWebImageWebPCoder/0.15.0/SDWebImageWebPCoder.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/1/7/SDWebImage/5.21.5/SDWebImage.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_1_9_2.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/9/2/libwebp/1.5.0/libwebp.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/9/2/libwebp/1.5.0/libwebp.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/9/2/libwebp/1.5.0/libwebp.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/9/2/libwebp/1.5.0/libwebp.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/9/2/libwebp/1.5.0/libwebp.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/9/2/libwebp/1.5.0/libwebp.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_1_6_0.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/6/0/TensorFlowLiteC/2.17.0/TensorFlowLiteC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/6/0/TensorFlowLiteC/2.12.0/TensorFlowLiteC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/d/9/6/TensorFlowLiteSwift/2.12.0/TensorFlowLiteSwift.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/6/0/TensorFlowLiteC/2.12.0/TensorFlowLiteC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/6/0/TensorFlowLiteC/2.12.0/TensorFlowLiteC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/b/e/b/GoogleMLKit/3.2.0/GoogleMLKit.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_e_2_0.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/2/0/MLKitTextRecognition/7.0.0/MLKitTextRecognition.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/2/0/MLKitTextRecognition/1.4.0-beta6/MLKitTextRecognition.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_c_c_6.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/c/6/MLKitCommon/14.0.0/MLKitCommon.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_7_c_c.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/c/c/MLKitTextRecognitionCommon/6.0.0/MLKitTextRecognitionCommon.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_8_1_e.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/1/e/MLKitVision/10.0.0/MLKitVision.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/c/c/MLKitTextRecognitionCommon/1.0.0-beta6/MLKitTextRecognitionCommon.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/2/b/onnxruntime-objc/1.15.1/onnxruntime-objc.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/2/b/onnxruntime-objc/1.15.1/onnxruntime-objc.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_3_a_a.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/3/a/a/onnxruntime-c/1.23.0/onnxruntime-c.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/3/a/a/onnxruntime-c/1.15.1/onnxruntime-c.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/d/9/6/TensorFlowLiteSwift/2.12.0/TensorFlowLiteSwift.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/5/d/c/Mantle/2.2.0/Mantle.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/5/d/c/Mantle/2.2.0/Mantle.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/c/6/MLKitCommon/8.0.0/MLKitCommon.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_c_e_3.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/5.0.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.1/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.2/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.3/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.4/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.5/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.6/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.7/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.8/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.9/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.10/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.11/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.12/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.13/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.14/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.1.15/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.2.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.2.1/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.2.2/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.3.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.3.1/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.4.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.5.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.6.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.6.1/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.7.0/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.7.1/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/e/3/GTMSessionFetcher/1.7.2/GTMSessionFetcher.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_0_6_a.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/10.1.0/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_7_4_b.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/5.0.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.3/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.4/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.3/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.4/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.3/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.1.4/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.2.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.0/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.1/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_0_8_4.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/8.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.0.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.1.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.2.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.2.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.3.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.3.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.4.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.4.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.4.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.5.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.5.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.5.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.6.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.7.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.8.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.10.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.4/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.5/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.6/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.12.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_8_8_9.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/8/9/GoogleUtilitiesComponents/1.1.0/GoogleUtilitiesComponents.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_e_c_d.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/5.34.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/c/c/6/MLKitCommon/8.0.0/MLKitCommon.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/1/e/MLKitVision/4.2.0/MLKitVision.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_0_a_c.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/a/c/MLImage/1.0.0-beta8/MLImage.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/a/c/MLImage/1.0.0-beta3/MLImage.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/1/7/SDWebImage/5.21.5/SDWebImage.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/1/7/SDWebImage/5.21.5/SDWebImage.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/1/6/0/TensorFlowLiteC/2.12.0/TensorFlowLiteC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/8/9/GoogleUtilitiesComponents/1.1.0/GoogleUtilitiesComponents.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/8/8/9/GoogleUtilitiesComponents/1.0.0/GoogleUtilitiesComponents.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/1.0.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/1.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/1.2.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/1.3.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/1.3.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/1.3.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.2.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.2.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.2.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.2.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.4/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.5/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.6/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.3.7/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.4.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.4.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.5.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.6.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.7.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/5.8.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.0.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.2.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.2.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.2.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.2.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.2.4/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.2.5/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.3.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.3.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.3.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.4.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.5.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.5.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.5.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.6.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.7.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.7.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/6.7.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.0.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.1.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.2.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.2.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.3.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.3.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.4.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.4.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.4.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.5.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.5.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.5.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.6.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.7.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.8.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.10.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.4/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.5/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.6/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.12.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/8.0.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/8.0.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/8.0.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/8.1.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/7/4/b/GoogleToolboxForMac/2.3.2/GoogleToolboxForMac.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/3.16.0/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/3.13.2/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/3.13.0/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/3.0.0/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/2.10.2/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/2.5/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/2.2.2/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/2.0.0/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/1.22.4/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/1.17.0/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/1.12.1303/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/4/2/c/FlutterMacOS/1.9.102/FlutterMacOS.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.4.1/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.4.0/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.3.0/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.2.5/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.2.3/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.2.2/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.2.1/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.2.0/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.1.4/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.1.3/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.1.2/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.1.0/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.0.1/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/6/a/GoogleDataTransport/9.0.0/GoogleDataTransport.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.7.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.8.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.10.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.1/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.4/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.5/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.11.6/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.12.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.0/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.2/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_6_1_e.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/3.30910.0/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: all_pods_versions_0_b_5.txt exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.4.0/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/2.30910.0/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/2.30909.1/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/2.30909.0/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/2.30908.0/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/2.30910.0/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/6/1/e/nanopb/2.30910.0/nanopb.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.4.0/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.3.1/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.3.0/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.2.0/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.1.1/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.1.0/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/2.0.0/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.12/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.11/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.10/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.9/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.8/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.7/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.6/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.5/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.4/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.3/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.2/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2.1/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/b/5/PromisesObjC/1.2/PromisesObjC.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/0/8/4/GoogleUtilities/7.13.3/GoogleUtilities.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.5/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.29.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.28.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.5/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.27.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.26.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.26.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.26.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.26.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.26.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.8/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.7/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.6/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.5/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.25.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.24.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.23.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.5/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.22.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.12/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.11/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.10/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.9/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.8/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.7/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.6/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.5/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.21.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.1-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.20.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.6/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.5/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.4/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.19.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.18.3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.18.1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.18.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.18.0-rc2/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.18.0-rc1/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.17.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.16.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.15.8/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.14.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.13.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.13.0-rc3/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+      CDN: trunk Relative path: Specs/e/c/d/Protobuf/3.12.0/Protobuf.podspec.json exists! Returning local because checking is only performed in repo update
+
+    Comparing resolved specification to the sandbox manifest
+      A Flutter
+      A GTMSessionFetcher
+      A GoogleDataTransport
+      A GoogleMLKit
+      A GoogleToolboxForMac
+      A GoogleUtilities
+      A GoogleUtilitiesComponents
+      A MLImage
+      A MLKitCommon
+      A MLKitTextRecognition
+      A MLKitTextRecognitionCommon
+      A MLKitVision
+      A Mantle
+      A PromisesObjC
+      A Protobuf
+      A SDWebImage
+      A SDWebImageWebPCoder
+      A TensorFlowLiteC
+      A TensorFlowLiteSwift
+      A app_links
+      A camera_avfoundation
+      A connectivity_plus
+      A emoji_picker_flutter
+      A flutter_image_compress_common
+      A flutter_local_notifications
+      A flutter_secure_storage
+      A fluttertoast
+      A geocoding_ios
+      A geolocator_apple
+      A image_picker_ios
+      A libwebp
+      A nanopb
+      A onnxruntime
+      A onnxruntime-c
+      A onnxruntime-objc
+      A permission_handler_apple
+      A sensors_plus
+      A share_plus
+      A shared_preferences_foundation
+      A sqflite_darwin
+      A tflite_flutter
+      A url_launcher_ios
+
+    Downloading dependencies
+
+    -> Installing Flutter (1.0.0)
+
+    -> Installing GTMSessionFetcher (1.7.2)
+      > Copying GTMSessionFetcher from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/GTMSessionFetcher/1.7.2-5595e` to `Pods/GTMSessionFetcher`
+
+    -> Installing GoogleDataTransport (9.4.1)
+      > Copying GoogleDataTransport from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/GoogleDataTransport/9.4.1-6c09b` to `Pods/GoogleDataTransport`
+
+    -> Installing GoogleMLKit (3.2.0)
+      > Copying GoogleMLKit from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/GoogleMLKit/3.2.0-0017a` to `Pods/GoogleMLKit`
+
+    -> Installing GoogleToolboxForMac (2.3.2)
+      > Copying GoogleToolboxForMac from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/GoogleToolboxForMac/2.3.2-8bef7` to `Pods/GoogleToolboxForMac`
+
+    -> Installing GoogleUtilities (7.13.3)
+      > Copying GoogleUtilities from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/GoogleUtilities/7.13.3-ea963` to `Pods/GoogleUtilities`
+
+    -> Installing GoogleUtilitiesComponents (1.1.0)
+      > Copying GoogleUtilitiesComponents from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/GoogleUtilitiesComponents/1.1.0-679b2` to `Pods/GoogleUtilitiesComponents`
+
+    -> Installing MLImage (1.0.0-beta3)
+      > Copying MLImage from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/MLImage/1.0.0-beta3-489df` to `Pods/MLImage`
+
+    -> Installing MLKitCommon (8.0.0)
+      > Copying MLKitCommon from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/MLKitCommon/8.0.0-f6da6` to `Pods/MLKitCommon`
+
+    -> Installing MLKitTextRecognition (1.4.0-beta6)
+      > Copying MLKitTextRecognition from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/MLKitTextRecognition/1.4.0-beta6-f6fda` to `Pods/MLKitTextRecognition`
+
+    -> Installing MLKitTextRecognitionCommon (1.0.0-beta6)
+      > Copying MLKitTextRecognitionCommon from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/MLKitTextRecognitionCommon/1.0.0-beta6-0c720` to `Pods/MLKitTextRecognitionCommon`
+
+    -> Installing MLKitVision (4.2.0)
+      > Copying MLKitVision from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/MLKitVision/4.2.0-96c96` to `Pods/MLKitVision`
+
+    -> Installing Mantle (2.2.0)
+      > Copying Mantle from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/Mantle/2.2.0-c5aa8` to `Pods/Mantle`
+
+    -> Installing PromisesObjC (2.4.0)
+      > Copying PromisesObjC from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/PromisesObjC/2.4.0-f5707` to `Pods/PromisesObjC`
+
+    -> Installing Protobuf (3.29.5)
+      > Copying Protobuf from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/Protobuf/3.29.5-164ae` to `Pods/Protobuf`
+
+    -> Installing SDWebImage (5.21.5)
+      > Copying SDWebImage from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/SDWebImage/5.21.5-e9c98` to `Pods/SDWebImage`
+
+    -> Installing SDWebImageWebPCoder (0.15.0)
+      > Copying SDWebImageWebPCoder from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/SDWebImageWebPCoder/0.15.0-0e06e` to `Pods/SDWebImageWebPCoder`
+
+    -> Installing TensorFlowLiteC (2.12.0)
+      > Copying TensorFlowLiteC from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/TensorFlowLiteC/2.12.0-20785` to `Pods/TensorFlowLiteC`
+
+    -> Installing TensorFlowLiteSwift (2.12.0)
+      > Copying TensorFlowLiteSwift from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/TensorFlowLiteSwift/2.12.0-3a492` to `Pods/TensorFlowLiteSwift`
+
+    -> Installing app_links (6.4.1)
+
+    -> Installing camera_avfoundation (0.0.1)
+
+    -> Installing connectivity_plus (0.0.1)
+
+    -> Installing emoji_picker_flutter (0.0.1)
+
+    -> Installing flutter_image_compress_common (1.0.0)
+
+    -> Installing flutter_local_notifications (0.0.1)
+
+    -> Installing flutter_secure_storage (6.0.0)
+
+    -> Installing fluttertoast (0.0.2)
+
+    -> Installing geocoding_ios (1.0.5)
+
+    -> Installing geolocator_apple (1.2.0)
+
+    -> Installing image_picker_ios (0.0.1)
+
+    -> Installing libwebp (1.5.0)
+      > Copying libwebp from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/libwebp/1.5.0-02b23` to `Pods/libwebp`
+
+    -> Installing nanopb (2.30910.0)
+      > Copying nanopb from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/nanopb/2.30910.0-438bc` to `Pods/nanopb`
+
+    -> Installing onnxruntime (0.0.1)
+
+    -> Installing onnxruntime-c (1.15.1)
+      > Copying onnxruntime-c from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/onnxruntime-c/1.15.1-ebdcf` to `Pods/onnxruntime-c`
+
+    -> Installing onnxruntime-objc (1.15.1)
+      > Copying onnxruntime-objc from `/Users/parth/Library/Caches/CocoaPods/Pods/Release/onnxruntime-objc/1.15.1-ae7ac` to `Pods/onnxruntime-objc`
+
+    -> Installing permission_handler_apple (9.3.0)
+
+    -> Installing sensors_plus (0.0.1)
+
+    -> Installing share_plus (0.0.1)
+
+    -> Installing shared_preferences_foundation (0.0.1)
+
+    -> Installing sqflite_darwin (0.0.4)
+
+    -> Installing tflite_flutter (0.0.1)
+
+    -> Installing url_launcher_ios (0.0.1)
+      - Running pre install hooks
+      - Running pre integrate hooks
+
+    Generating Pods project
+      - Creating Pods project
+      - Installing files into Pods project
+        - Adding source files
+        - Adding frameworks
+        - Adding libraries
+        - Adding resources
+        - Adding development pod helper files
+        - Linking headers
+      - Installing Pod Targets
+        - Installing target `Flutter` iOS 13.0
+        - Installing target `GTMSessionFetcher` iOS 9.0
+          - Generating module map file at `Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m`
+        - Installing target `GoogleDataTransport` iOS 9.0
+          - Generating Info.plist file at `Pods/Target Support Files/GoogleDataTransport/ResourceBundle-GoogleDataTransport_Privacy-GoogleDataTransport-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-dummy.m`
+        - Installing target `GoogleMLKit` iOS 10.0
+        - Installing target `GoogleToolboxForMac` iOS 9.0
+          - Generating module map file at `Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-dummy.m`
+        - Installing target `GoogleUtilities` iOS 9.0
+          - Generating Info.plist file at `Pods/Target Support Files/GoogleUtilities/ResourceBundle-GoogleUtilities_Privacy-GoogleUtilities-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/GoogleUtilities/GoogleUtilities.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/GoogleUtilities/GoogleUtilities-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/GoogleUtilities/GoogleUtilities-dummy.m`
+        - Installing target `GoogleUtilitiesComponents` iOS 10.0
+          - Generating module map file at `Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents-dummy.m`
+        - Installing target `MLImage` iOS 9.0
+        - Installing target `MLKitCommon` iOS 10.0
+        - Installing target `MLKitTextRecognition` iOS 10.0
+          - Generating Info.plist file at `Pods/Target Support Files/MLKitTextRecognition/ResourceBundle-LatinOCRResources-MLKitTextRecognition-Info.plist`
+        - Installing target `MLKitTextRecognitionCommon` iOS 10.0
+        - Installing target `MLKitVision` iOS 10.0
+        - Installing target `Mantle` iOS 9.0
+          - Generating module map file at `Pods/Target Support Files/Mantle/Mantle.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/Mantle/Mantle-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/Mantle/Mantle-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/Mantle/Mantle-dummy.m`
+        - Installing target `PromisesObjC` iOS 9.0
+          - Generating Info.plist file at `Pods/Target Support Files/PromisesObjC/ResourceBundle-FBLPromises_Privacy-PromisesObjC-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/PromisesObjC/PromisesObjC.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/PromisesObjC/PromisesObjC-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/PromisesObjC/PromisesObjC-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/PromisesObjC/PromisesObjC-dummy.m`
+        - Installing target `Protobuf` iOS 10.0
+          - Generating Info.plist file at `Pods/Target Support Files/Protobuf/ResourceBundle-Protobuf_Privacy-Protobuf-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/Protobuf/Protobuf.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/Protobuf/Protobuf-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/Protobuf/Protobuf-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/Protobuf/Protobuf-dummy.m`
+        - Installing target `SDWebImage` iOS 9.0
+          - Generating Info.plist file at `Pods/Target Support Files/SDWebImage/ResourceBundle-SDWebImage-SDWebImage-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/SDWebImage/SDWebImage.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/SDWebImage/SDWebImage-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/SDWebImage/SDWebImage-dummy.m`
+        - Installing target `SDWebImageWebPCoder` iOS 9.0
+          - Copying module map file to `Pods/Target Support Files/SDWebImageWebPCoder/SDWebImageWebPCoder.modulemap`
+          - Generating Info.plist file at `Pods/Target Support Files/SDWebImageWebPCoder/SDWebImageWebPCoder-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/SDWebImageWebPCoder/SDWebImageWebPCoder-dummy.m`
+        - Installing target `TensorFlowLiteC` iOS 11.0
+        - Installing target `TensorFlowLiteSwift` iOS 11.0
+          - Generating module map file at `Pods/Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/TensorFlowLiteSwift/TensorFlowLiteSwift-dummy.m`
+        - Installing target `app_links` iOS 12.0
+          - Generating Info.plist file at `Pods/Target Support Files/app_links/ResourceBundle-app_links_ios_privacy-app_links-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/app_links/app_links.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/app_links/app_links-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/app_links/app_links-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/app_links/app_links-dummy.m`
+        - Installing target `camera_avfoundation` iOS 13.0
+          - Generating Info.plist file at `Pods/Target Support Files/camera_avfoundation/ResourceBundle-camera_avfoundation_privacy-camera_avfoundation-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/camera_avfoundation/camera_avfoundation.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/camera_avfoundation/camera_avfoundation-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/camera_avfoundation/camera_avfoundation-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/camera_avfoundation/camera_avfoundation-dummy.m`
+        - Installing target `connectivity_plus` iOS 12.0
+          - Generating Info.plist file at `Pods/Target Support Files/connectivity_plus/ResourceBundle-connectivity_plus_privacy-connectivity_plus-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/connectivity_plus/connectivity_plus.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/connectivity_plus/connectivity_plus-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/connectivity_plus/connectivity_plus-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/connectivity_plus/connectivity_plus-dummy.m`
+        - Installing target `emoji_picker_flutter` iOS 11.0
+          - Generating module map file at `Pods/Target Support Files/emoji_picker_flutter/emoji_picker_flutter.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/emoji_picker_flutter/emoji_picker_flutter-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/emoji_picker_flutter/emoji_picker_flutter-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/emoji_picker_flutter/emoji_picker_flutter-dummy.m`
+        - Installing target `flutter_image_compress_common` iOS 9.0
+          - Generating module map file at `Pods/Target Support Files/flutter_image_compress_common/flutter_image_compress_common.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/flutter_image_compress_common/flutter_image_compress_common-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/flutter_image_compress_common/flutter_image_compress_common-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/flutter_image_compress_common/flutter_image_compress_common-dummy.m`
+        - Installing target `flutter_local_notifications` iOS 11.0
+          - Generating Info.plist file at `Pods/Target Support Files/flutter_local_notifications/ResourceBundle-flutter_local_notifications_privacy-flutter_local_notifications-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/flutter_local_notifications/flutter_local_notifications.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/flutter_local_notifications/flutter_local_notifications-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/flutter_local_notifications/flutter_local_notifications-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/flutter_local_notifications/flutter_local_notifications-dummy.m`
+        - Installing target `flutter_secure_storage` iOS 9.0
+          - Generating Info.plist file at `Pods/Target Support Files/flutter_secure_storage/ResourceBundle-flutter_secure_storage-flutter_secure_storage-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/flutter_secure_storage/flutter_secure_storage.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/flutter_secure_storage/flutter_secure_storage-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/flutter_secure_storage/flutter_secure_storage-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/flutter_secure_storage/flutter_secure_storage-dummy.m`
+        - Installing target `fluttertoast` iOS 8.0
+          - Generating Info.plist file at `Pods/Target Support Files/fluttertoast/ResourceBundle-fluttertoast_privacy-fluttertoast-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/fluttertoast/fluttertoast.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/fluttertoast/fluttertoast-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/fluttertoast/fluttertoast-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/fluttertoast/fluttertoast-dummy.m`
+        - Installing target `geocoding_ios` iOS 8.0
+          - Generating module map file at `Pods/Target Support Files/geocoding_ios/geocoding_ios.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/geocoding_ios/geocoding_ios-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/geocoding_ios/geocoding_ios-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/geocoding_ios/geocoding_ios-dummy.m`
+        - Installing target `geolocator_apple` iOS 11.0
+          - Generating Info.plist file at `Pods/Target Support Files/geolocator_apple/ResourceBundle-geolocator_apple_privacy-geolocator_apple-Info.plist`
+          - Copying module map file to `Pods/Target Support Files/geolocator_apple/geolocator_apple.modulemap`
+          - Generating Info.plist file at `Pods/Target Support Files/geolocator_apple/geolocator_apple-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/geolocator_apple/geolocator_apple-dummy.m`
+        - Installing target `image_picker_ios` iOS 13.0
+          - Generating Info.plist file at `Pods/Target Support Files/image_picker_ios/ResourceBundle-image_picker_ios_privacy-image_picker_ios-Info.plist`
+          - Copying module map file to `Pods/Target Support Files/image_picker_ios/image_picker_ios.modulemap`
+          - Generating Info.plist file at `Pods/Target Support Files/image_picker_ios/image_picker_ios-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/image_picker_ios/image_picker_ios-dummy.m`
+        - Installing target `libwebp` iOS 9.0
+          - Generating module map file at `Pods/Target Support Files/libwebp/libwebp.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/libwebp/libwebp-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/libwebp/libwebp-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/libwebp/libwebp-dummy.m`
+        - Installing target `nanopb` iOS 9.0
+          - Generating Info.plist file at `Pods/Target Support Files/nanopb/ResourceBundle-nanopb_Privacy-nanopb-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/nanopb/nanopb.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/nanopb/nanopb-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/nanopb/nanopb-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/nanopb/nanopb-dummy.m`
+        - Installing target `onnxruntime` iOS 11.0
+        - Installing target `onnxruntime-c` iOS 11.0
+        - Installing target `onnxruntime-objc` iOS 11.0
+          - Generating module map file at `Pods/Target Support Files/onnxruntime-objc/onnxruntime-objc.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/onnxruntime-objc/onnxruntime-objc-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/onnxruntime-objc/onnxruntime-objc-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/onnxruntime-objc/onnxruntime-objc-dummy.m`
+        - Installing target `permission_handler_apple` iOS 8.0
+          - Generating Info.plist file at `Pods/Target Support Files/permission_handler_apple/ResourceBundle-permission_handler_apple_privacy-permission_handler_apple-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/permission_handler_apple/permission_handler_apple.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/permission_handler_apple/permission_handler_apple-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/permission_handler_apple/permission_handler_apple-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/permission_handler_apple/permission_handler_apple-dummy.m`
+        - Installing target `sensors_plus` iOS 11.0
+          - Generating module map file at `Pods/Target Support Files/sensors_plus/sensors_plus.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/sensors_plus/sensors_plus-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/sensors_plus/sensors_plus-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/sensors_plus/sensors_plus-dummy.m`
+        - Installing target `share_plus` iOS 11.0
+          - Generating module map file at `Pods/Target Support Files/share_plus/share_plus.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/share_plus/share_plus-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/share_plus/share_plus-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/share_plus/share_plus-dummy.m`
+        - Installing target `shared_preferences_foundation` iOS 13.0
+          - Generating Info.plist file at `Pods/Target Support Files/shared_preferences_foundation/ResourceBundle-shared_preferences_foundation_privacy-shared_preferences_foundation-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-dummy.m`
+        - Installing target `sqflite_darwin` iOS 12.0
+          - Generating Info.plist file at `Pods/Target Support Files/sqflite_darwin/ResourceBundle-sqflite_darwin_privacy-sqflite_darwin-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/sqflite_darwin/sqflite_darwin.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/sqflite_darwin/sqflite_darwin-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/sqflite_darwin/sqflite_darwin-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/sqflite_darwin/sqflite_darwin-dummy.m`
+        - Installing target `tflite_flutter` iOS 11.0
+        - Installing target `url_launcher_ios` iOS 13.0
+          - Generating Info.plist file at `Pods/Target Support Files/url_launcher_ios/ResourceBundle-url_launcher_ios_privacy-url_launcher_ios-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/url_launcher_ios/url_launcher_ios.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/url_launcher_ios/url_launcher_ios-umbrella.h`
+          - Generating Info.plist file at `Pods/Target Support Files/url_launcher_ios/url_launcher_ios-Info.plist`
+          - Generating dummy source at `Pods/Target Support Files/url_launcher_ios/url_launcher_ios-dummy.m`
+      - Installing Aggregate Targets
+        - Installing target `Pods-Runner` iOS 15.0
+          - Generating Info.plist file at `Pods/Target Support Files/Pods-Runner/Pods-Runner-Info.plist`
+          - Generating module map file at `Pods/Target Support Files/Pods-Runner/Pods-Runner.modulemap`
+          - Generating umbrella header at `Pods/Target Support Files/Pods-Runner/Pods-Runner-umbrella.h`
+          - Generating dummy source at `Pods/Target Support Files/Pods-Runner/Pods-Runner-dummy.m`
+      - Integrating targets
+
+    Integrating target `TensorFlowLiteC`
+        Adding Build Phase '[CP] Copy XCFrameworks' to project.
+
+    Integrating target `onnxruntime-c`
+        Adding Build Phase '[CP] Copy XCFrameworks' to project.
+      - Generating deterministic UUIDs
+      - Stabilizing target UUIDs
+      - Running post install hooks
+    [!] An error occurred while processing the post-install hook of the Podfile.
+
+    /Users/parth/Downloads/bin/cache/artifacts/engine/ios/Flutter.xcframework must exist. If you're running pod install manually, make sure "flutter precache --ios" is executed first
+
+    /Users/parth/Downloads/prismstyle_ai_0393/ios/Flutter/podhelper.rb:61:in 'Object#flutter_additional_ios_build_settings'
+    /Users/parth/Downloads/prismstyle_ai_0393/ios/Podfile:40:in 'block (3 levels) in Pod::Podfile.from_ruby'
+    /Users/parth/Downloads/prismstyle_ai_0393/ios/Podfile:39:in 'Array#each'
+    /Users/parth/Downloads/prismstyle_ai_0393/ios/Podfile:39:in 'block (2 levels) in Pod::Podfile.from_ruby'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:196:in 'Pod::Podfile#post_install!'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:1013:in 'Pod::Installer#run_podfile_post_install_hook'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:1001:in 'block in Pod::Installer#run_podfile_post_install_hooks'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/user_interface.rb:149:in 'Pod::UserInterface.message'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:1000:in 'Pod::Installer#run_podfile_post_install_hooks'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:337:in 'block (2 levels) in Pod::Installer#create_and_save_projects'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer/xcode/pods_project_generator/pods_project_writer.rb:61:in 'Pod::Installer::Xcode::PodsProjectWriter#write!'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:336:in 'block in Pod::Installer#create_and_save_projects'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/user_interface.rb:64:in 'Pod::UserInterface.section'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:315:in 'Pod::Installer#create_and_save_projects'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:307:in 'Pod::Installer#generate_pods_project'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:183:in 'Pod::Installer#integrate'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:170:in 'Pod::Installer#install!'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/command/install.rb:52:in 'Pod::Command::Install#run'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/claide-1.1.0/lib/claide/command.rb:334:in 'CLAide::Command.run'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/command.rb:52:in 'Pod::Command.run'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/bin/pod:55:in '<top (required)>'
+    /opt/homebrew/Cellar/ruby/4.0.1/lib/ruby/4.0.0/rubygems.rb:303:in 'Kernel#load'
+    /opt/homebrew/Cellar/ruby/4.0.1/lib/ruby/4.0.0/rubygems.rb:303:in 'Gem.activate_and_load_bin_path'
+    /opt/homebrew/lib/ruby/gems/4.0.0/bin/pod:25:in '<main>'
+
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:1015:in 'Pod::Installer#run_podfile_post_install_hook'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:1001:in 'block in Pod::Installer#run_podfile_post_install_hooks'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/user_interface.rb:149:in 'Pod::UserInterface.message'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:1000:in 'Pod::Installer#run_podfile_post_install_hooks'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:337:in 'block (2 levels) in Pod::Installer#create_and_save_projects'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer/xcode/pods_project_generator/pods_project_writer.rb:61:in 'Pod::Installer::Xcode::PodsProjectWriter#write!'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:336:in 'block in Pod::Installer#create_and_save_projects'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/user_interface.rb:64:in 'Pod::UserInterface.section'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:315:in 'Pod::Installer#create_and_save_projects'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:307:in 'Pod::Installer#generate_pods_project'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:183:in 'Pod::Installer#integrate'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/installer.rb:170:in 'Pod::Installer#install!'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/command/install.rb:52:in 'Pod::Command::Install#run'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/claide-1.1.0/lib/claide/command.rb:334:in 'CLAide::Command.run'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/lib/cocoapods/command.rb:52:in 'Pod::Command.run'
+    /opt/homebrew/lib/ruby/gems/4.0.0/gems/cocoapods-1.16.2/bin/pod:55:in '<top (required)>'
+    /opt/homebrew/Cellar/ruby/4.0.1/lib/ruby/4.0.0/rubygems.rb:303:in 'Kernel#load'
+    /opt/homebrew/Cellar/ruby/4.0.1/lib/ruby/4.0.0/rubygems.rb:303:in 'Gem.activate_and_load_bin_path'
+    /opt/homebrew/lib/ruby/gems/4.0.0/bin/pod:25:in '<main>'
+
+Error output from CocoaPods:
+↳
+
+    [!] Can't merge user_target_xcconfig for pod targets: ["MLKitCore", "TextRecognition", "MLImage", "MLKitCommon", "MLKitVision", "TensorFlowLiteC", "Core", "CoreML", "Metal", "TensorFlowLiteSwift", "Core", "CoreML", "Metal"]. Singular build setting EXCLUDED_ARCHS[sdk=iphonesimulator*] has different values.
+
+    [!] Can't merge user_target_xcconfig for pod targets: ["MLKitCore", "TextRecognition", "MLImage", "MLKitCommon", "MLKitVision", "TensorFlowLiteC", "Core", "CoreML", "Metal", "TensorFlowLiteSwift", "Core", "CoreML", "Metal"]. Singular build setting EXCLUDED_ARCHS[sdk=iphonesimulator*] has different values.
+
+    [!] Can't merge user_target_xcconfig for pod targets: ["MLKitCore", "TextRecognition", "MLImage", "MLKitCommon", "MLKitVision", "TensorFlowLiteC", "Core", "CoreML", "Metal", "TensorFlowLiteSwift", "Core", "CoreML", "Metal"]. Singular build setting EXCLUDED_ARCHS[sdk=iphonesimulator*] has different values.
+
+Error running pod install

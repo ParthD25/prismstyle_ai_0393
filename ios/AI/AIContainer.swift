@@ -1,8 +1,6 @@
 import Foundation
 import UIKit
 
-#if canImport(UIKit)
-
 /// Unified AI Container for PrismStyle AI
 /// This is the single entry point for all AI functionality,
 /// replacing the scattered "Brain" logic pattern.
@@ -408,4 +406,3 @@ public final class AIContainer {
         print("✅ AIContainer: All learning data reset")
     }
 }
-#endif

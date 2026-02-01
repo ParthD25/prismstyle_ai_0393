@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Prismstyle Ai</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -43,30 +45,5 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true />
-    </dict>
-	<!-- Location Permissions for Weather & Recommendations -->
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>PrismStyle AI needs your location to provide weather-appropriate outfit recommendations and show local style trends.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>PrismStyle AI uses your location to provide personalized weather-based outfit suggestions even when the app is in the background.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Allow PrismStyle AI to access your location for weather-based outfit recommendations.</string>
-	<!-- Camera Permissions -->
-	<key>NSCameraUsageDescription</key>
-	<string>PrismStyle AI needs camera access to capture photos of your clothing items for your digital wardrobe.</string>
-	<!-- Photo Library Permissions -->
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>PrismStyle AI needs access to your photo library to import clothing images to your wardrobe.</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>PrismStyle AI would like to save outfit photos to your photo library.</string>
-	<!-- Push Notifications -->
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-	</array>
 </dict>
 </plist>

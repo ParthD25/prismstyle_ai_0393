@@ -294,6 +294,7 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
     final theme = Theme.of(context);
 
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: RefreshIndicator(
         onRefresh: _handleRefresh,
         child: CustomScrollView(

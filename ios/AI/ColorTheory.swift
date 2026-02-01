@@ -1,7 +1,5 @@
 import Foundation
 import UIKit
-
-#if canImport(UIKit)
 import Accelerate
 
 /// CIELAB Color Theory Engine for PrismStyle AI
@@ -566,4 +564,3 @@ public final class ColorTheory {
         return min(1.0, max(0.0, score))
     }
 }
-#endif

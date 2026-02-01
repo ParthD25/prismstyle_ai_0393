@@ -1,8 +1,6 @@
 import Foundation
 import UIKit
 
-#if canImport(UIKit)
-
 /// Multi-Factor Compatibility Engine for PrismStyle AI
 /// Combines color harmony, occasion matching, style coherence, and user preferences
 /// into a unified outfit scoring system.
@@ -602,4 +600,3 @@ public final class CompatibilityEngine {
         return (colorScore * 0.5 + formalityScore * 0.3 + styleScore * 0.2)
     }
 }
-#endif

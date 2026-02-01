@@ -11,9 +11,16 @@ import VisionKit
   private var visualIntelligenceHandler: Any?
   private var fashionAIHandler: FashionAIHandler?
   
-  // New Unified AI Module (iOS 15+)
+  // New Unified AI Module (iOS 15+) - use computed property to avoid @available issue
+  private var _aiContainer: Any?
+  
   @available(iOS 15.0, *)
-  private lazy var aiContainer: AIContainer = AIContainer.shared
+  private var aiContainer: AIContainer {
+    if _aiContainer == nil {
+      _aiContainer = AIContainer.shared
+    }
+    return _aiContainer as! AIContainer
+  }
   
   override func application(
     _ application: UIApplication,

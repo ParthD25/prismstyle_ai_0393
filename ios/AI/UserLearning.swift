@@ -1,5 +1,4 @@
 import Foundation
-#if canImport(UIKit)
 
 /// User Preference Learning System for PrismStyle AI
 /// Uses Exponentially Weighted Moving Average (EWMA) to learn and adapt
@@ -492,4 +491,3 @@ public final class UserLearning {
         }
     }
 }
-#endif

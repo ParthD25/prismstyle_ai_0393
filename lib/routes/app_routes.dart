@@ -10,6 +10,7 @@ import '../presentation/camera_capture/camera_capture.dart';
 import '../presentation/generate_outfit/generate_outfit.dart';
 import '../presentation/privacy_policy/privacy_policy_screen.dart';
 import '../presentation/ai_test/ai_test_screen.dart';
+import '../presentation/main_screen.dart';
 
 class AppRoutes {
   static const String initial = '/';
@@ -29,7 +30,7 @@ class AppRoutes {
     initial: (context) => const SplashScreen(),
     outfitGenerator: (context) => const OutfitGenerator(),
     splash: (context) => const SplashScreen(),
-    homeDashboard: (context) => const HomeDashboard(),
+    homeDashboard: (context) => const MainScreen(),
     userProfile: (context) => const UserProfile(),
     onboardingFlow: (context) => const OnboardingFlow(),
     socialValidation: (context) => const SocialValidation(),
@@ -38,5 +39,6 @@ class AppRoutes {
     generateOutfit: (context) => const GenerateOutfit(),
     privacyPolicy: (context) => const PrivacyPolicyScreen(),
     aiTest: (context) => const AITestScreen(),
+    MainScreen.routeName: (context) => const MainScreen(),
   };
 }

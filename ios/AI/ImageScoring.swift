@@ -1,7 +1,5 @@
 import Foundation
 import UIKit
-
-#if canImport(UIKit)
 import Vision
 import Accelerate
 import CoreImage
@@ -643,4 +641,3 @@ public final class ImageScoring {
         return pixelData
     }
 }
-#endif
