@@ -31,8 +31,7 @@ target 'Runner' do
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
   
-  # Manual pods ensuring availability
-  pod 'GoogleMLKit/TextRecognition', '3.2.0'
+
 end
 
 post_install do |installer|
@@ -48,11 +47,7 @@ post_install do |installer|
       config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
       config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
       
-      # Force EXCLUDED_ARCHS to resolve merge conflicts and M2 Simulator issues
-      # Excluding arm64 on simulator forces it to use Rosetta (x86_64), 
-      # which avoids the slice conflict with MLImage.
-      config.build_settings.delete('EXCLUDED_ARCHS')
-      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'i386 arm64'
+
     end
   end
 end

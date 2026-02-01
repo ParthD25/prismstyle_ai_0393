@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'dart:ui';
 import 'package:prismstyle_ai/theme/lumina_theme.dart';
 import 'package:prismstyle_ai/presentation/widgets/floating_navbar.dart';
 import 'package:prismstyle_ai/presentation/home_dashboard/home_dashboard_initial_page.dart';

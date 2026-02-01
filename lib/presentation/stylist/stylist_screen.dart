@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:prismstyle_ai/theme/lumina_theme.dart';
 
 class StylistScreen extends StatefulWidget {
@@ -11,9 +12,9 @@ class StylistScreen extends StatefulWidget {
 class _StylistScreenState extends State<StylistScreen> with SingleTickerProviderStateMixin {
   // Placeholder data - connect to CompatibilityEngine later
   final List<String> _demoImages = [
-    'https://images.unsplash.com/photo-1594938298603-c8148c47e357?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1550246140-5119ae4790b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800', // Reliable Fashion Image 1
+    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800', // Reliable Fashion Image 2 
+    'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800', // Reliable Fashion Image 3
   ];
 
   late AnimationController _controller;
@@ -122,21 +123,50 @@ class _StylistScreenState extends State<StylistScreen> with SingleTickerProvider
               const SizedBox(height: 32),
               
               // Action Buttons
+              // Action Buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _ActionButton(
+                   _ActionButton(
                     icon: Icons.close,
                     color: Colors.redAccent,
                     onTap: () => _handleSwipe(false),
                   ),
-                  const SizedBox(width: 32),
-                  _ActionButton(
+                  const SizedBox(width: 24),
+                  
+                  // Share Button
+                   _ActionButton(
+                    icon: Icons.share,
+                    color: Colors.blueAccent,
+                    onTap: () {
+                      Share.share(
+                        'Check out this outfit I found on PrismStyle AI! #LuminaStyle',
+                        subject: 'Style Inspiration',
+                      );
+                    },
+                   ),
+                  
+                  const SizedBox(width: 24),
+                   _ActionButton(
                     icon: Icons.favorite,
                     color: Colors.greenAccent,
                     onTap: () => _handleSwipe(true),
                   ),
                 ],
+              ),
+              
+              const SizedBox(height: 20),
+              
+              // Custom Generator Link
+              TextButton.icon(
+                onPressed: () {
+                   Navigator.pushNamed(context, '/generator');
+                },
+                icon: const Icon(Icons.tune, color: Colors.white70),
+                label: const Text(
+                  'Custom Generator',
+                  style: TextStyle(color: Colors.white70),
+                ),
               ),
             ],
           ),

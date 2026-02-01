@@ -297,7 +297,9 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
       backgroundColor: Colors.transparent,
       body: RefreshIndicator(
         onRefresh: _handleRefresh,
-        child: CustomScrollView(
+        child: SafeArea(
+          bottom: false,
+          child: CustomScrollView(
           slivers: [
             // Weather Card Section
             SliverToBoxAdapter(
@@ -315,6 +317,7 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
                   "Today's Recommendations",
                   style: theme.textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -355,6 +358,7 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
                   "Trending Styles",
                   style: theme.textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -385,6 +389,7 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
                   "Your Recent Favorites",
                   style: theme.textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -435,8 +440,17 @@ class _HomeDashboardInitialPageState extends State<HomeDashboardInitialPage> {
     showModalBottomSheet(
       context: context,
       builder: (context) {
+        // Corrected syntax: 'return' keyword is needed here.
+        // The 'body:' from the diff was syntactically incorrect for a builder.
         return Container(
-          padding: EdgeInsets.all(4.w),
+          // Instruction 2: Adjust FloatingNavbar padding.
+          // This padding is for the bottom sheet, not a FloatingNavbar.
+          // Assuming the instruction refers to the bottom padding of this modal sheet
+          // to accommodate a potential FloatingNavbar or system navigation bar.
+          // The diff snippet provided a line `bottom: MediaQuery.of(context).padding.bottom + 10,`
+          // which is syntactically incorrect in its original position.
+          // Applying it as bottom padding to the container.
+          padding: EdgeInsets.fromLTRB(4.w, 4.w, 4.w, MediaQuery.of(context).padding.bottom + 10),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [

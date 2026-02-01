@@ -36,9 +36,14 @@ class LookbookScreen extends StatelessWidget {
                             flex: 3,
                             child: ClipRRect(
                               borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
-                              child: Container(
-                                color: Colors.white.withOpacity(0.05),
-                                child: Icon(Icons.checkroom, size: 48, color: Colors.white24),
+                              child: Image.network(
+                                [
+                                  'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800',
+                                  'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800', 
+                                  'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800',
+                                  'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800',
+                                ][index],
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
@@ -51,7 +56,7 @@ class LookbookScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    index == 0 ? 'Favorites' : 'Workwear',
+                                    ['Favorites', 'Workwear', 'Summer 2024', 'Date Night'][index],
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,

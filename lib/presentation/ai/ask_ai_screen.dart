@@ -14,25 +14,38 @@ class _AskAIScreenState extends State<AskAIScreen> {
     {'role': 'ai', 'text': 'Hello! I am your personal AI Stylist. How can I help you look your best today?'},
   ];
 
-  void _sendMessage() {
-    if (_controller.text.isEmpty) return;
+    final userText = _controller.text;
+    if (userText.isEmpty) return;
     
     setState(() {
-      _messages.add({'role': 'user', 'text': _controller.text});
-      // Simulate AI thinking and responding
+      _messages.add({'role': 'user', 'text': userText});
+      _controller.clear();
+      
+      // Simulate AI thinking and responding with improved logic
       Future.delayed(const Duration(seconds: 1), () {
+        String aiResponse;
+        final lowerText = userText.toLowerCase();
+
+        if (lowerText.contains('cotton') || lowerText.contains('polyester')) {
+          aiResponse = "Cotton is generally better for breathability and comfort, making it ideal for summer and everyday wear. Polyester is durable and wrinkle-resistant but can trap heat. For winter, cotton layering is good, but wool or synthetic blends (like polyester fleece) often provide better insulation.";
+        } else if (lowerText.contains('winter')) {
+          aiResponse = "For winter, layering is key! Start with a moisture-wicking base layer, add an insulating middle layer (like wool or fleece), and finish with a wind/waterproof outer shell. Fabrics like wool, cashmere, and down are excellent choices.";
+        } else if (lowerText.contains('summer')) {
+          aiResponse = "In summer, opt for lightweight, breathable fabrics like linen, cotton, and seersucker. Light colors help reflect sunlight and keep you cool. Consider loose-fitting clothes for better airflow.";
+        } else {
+          aiResponse = "That sounds interesting! Based on your wardrobe, I'd suggest experimenting with different textures. Could you tell me more about the occasion?";
+        }
+
         if (mounted) {
           setState(() {
             _messages.add({
               'role': 'ai',
-              'text': 'That sounds like a great idea! Based on your wardrobe, I recommend pairing the Navy Blazer with the Beige Chinos for a smart casual look.'
+              'text': aiResponse
             });
           });
         }
       });
-      _controller.clear();
     });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +119,7 @@ class _AskAIScreenState extends State<AskAIScreen> {
                   Expanded(
                     child: TextField(
                       controller: _controller,
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.black),
                       decoration: const InputDecoration(
                         hintText: 'Ask for style advice...',
                         hintStyle: TextStyle(color: Colors.grey),

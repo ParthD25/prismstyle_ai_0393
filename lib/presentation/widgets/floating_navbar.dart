@@ -18,7 +18,7 @@ class FloatingNavbar extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: Padding(
         padding: EdgeInsets.only(
-          bottom: MediaQuery.of(context).padding.bottom + 20,
+          bottom: MediaQuery.of(context).padding.bottom + 0,
           left: 20,
           right: 20,
         ),
